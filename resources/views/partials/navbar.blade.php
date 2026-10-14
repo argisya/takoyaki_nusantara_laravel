@@ -4,10 +4,10 @@
     $navItems = [
         ['label' => 'Beranda',        'route' => 'home',        'anchor' => null],
         ['label' => 'Menu & Varian',  'route' => 'menu',        'anchor' => null],
+        ['label' => 'Galeri',        'route' => 'gallery',     'anchor' => null],
         ['label' => 'Keunggulan',     'route' => 'home',        'anchor' => 'keunggulan'],
-        ['label' => 'Lokasi Outlet',  'route' => 'home',        'anchor' => 'outlet'],
         ['label' => 'Tentang Kami',   'route' => 'about',       'anchor' => null],
-        ['label' => 'Franchise',      'route' => 'partnership', 'anchor' => null],
+        ['label' => 'Kemitraan',      'route' => 'partnership', 'anchor' => null],
     ];
 @endphp
 

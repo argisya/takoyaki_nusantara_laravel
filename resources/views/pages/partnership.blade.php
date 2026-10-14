@@ -1,76 +1,82 @@
+{{-- resources/views/pages/partnership.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Kemitraan / Franchise - Takoyaki Nusantara')
-@section('meta_description', 'Bergabung jadi mitra Takoyaki Nusantara. Sistem operasional matang, supply terjamin, ROI cepat.')
+@section('title', 'Kemitraan & Franchise - Takoyaki Nusantara | ROI 2-4 Bulan')
+@section('meta_description', 'Jadi mitra Takoyaki Nusantara: tanpa royalty fee, BEP 2-4 bulan, paket mulai Rp 14,5 juta. Sistem teruji dengan 50+ mitra aktif di 12 kota.')
+@section('meta_keywords', 'franchise takoyaki, kemitraan takoyaki, peluang usaha kuliner, franchise murah, usaha takoyaki')
 
 @section('content')
-<section class="w-full py-14 lg:py-20 bg-surface">
-    <div class="max-w-[720px] w-full mx-auto px-margin md:px-margin-tablet">
 
-        <x-section-header
-            label="Peluang Bisnis"
-            title="Formulir Pendaftaran Kemitraan"
-            subtitle="Isi data di bawah, tim kami akan menghubungi Anda maksimal 1×24 jam." />
+@include('components.partnership.hero')
+@include('components.partnership.pillars')
+@include('components.partnership.packages')
+@include('components.partnership.facilities')
+@include('components.partnership.roi')
+@include('components.partnership.schemes')
+@include('components.partnership.steps')
+@include('components.partnership.form')
+@include('components.partnership.faq')
+@include('components.partnership.cta')
 
-        @if(session('success'))
-            <div class="mb-6 p-4 bg-tertiary/10 text-tertiary border border-tertiary/30 rounded-xl">
-                {{ session('success') }}
-            </div>
-        @endif
-
-        <form action="{{ route('partnership.store') }}" method="POST"
-              class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-5">
-            @csrf
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[12px] font-bold text-on-surface-variant">Nama Lengkap *</label>
-                    <input type="text" name="name" required value="{{ old('name') }}"
-                           class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px]">
-                </div>
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[12px] font-bold text-on-surface-variant">Nomor WhatsApp *</label>
-                    <input type="tel" name="phone" required value="{{ old('phone') }}" placeholder="08xxxxxxxxxx"
-                           class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px]">
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-1.5">
-                <label class="text-[12px] font-bold text-on-surface-variant">Email</label>
-                <input type="email" name="email" value="{{ old('email') }}"
-                       class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px]">
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[12px] font-bold text-on-surface-variant">Kota Rencana Outlet *</label>
-                    <input type="text" name="city" required value="{{ old('city') }}"
-                           class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px]">
-                </div>
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-[12px] font-bold text-on-surface-variant">Estimasi Budget *</label>
-                    <select name="budget" required
-                            class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px]">
-                        <option value="">-- Pilih --</option>
-                        <option>Rp 15 - 25 juta</option>
-                        <option>Rp 25 - 50 juta</option>
-                        <option>> Rp 50 juta</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-1.5">
-                <label class="text-[12px] font-bold text-on-surface-variant">Pesan Tambahan</label>
-                <textarea name="message" rows="4"
-                          class="px-4 py-2.5 rounded-xl border border-outline-variant/50 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-[14px] resize-none">{{ old('message') }}</textarea>
-            </div>
-
-            <button type="submit"
-                    class="mt-2 inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary px-6 py-3.5 rounded-xl font-bold shadow-md transition-all">
-                <span class="material-symbols-outlined text-[20px]">handshake</span>
-                Kirim Pendaftaran
-            </button>
-        </form>
-    </div>
-</section>
 @endsection
+
+@push('scripts')
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    /* ============ FAQ ACCORDION ============ */
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = trigger.querySelector('.material-symbols-outlined');
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-trigger .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    /* ============ ROI SIMULATOR ============ */
+    const slider = document.getElementById('roi-slider');
+    const sliderLabel = document.getElementById('slider-label');
+    const calcOmset = document.getElementById('calc-omset');
+    const calcHpp = document.getElementById('calc-hpp');
+    const calcNet = document.getElementById('calc-net');
+    const calcBep = document.getElementById('calc-bep');
+
+    const fmt = n => 'Rp ' + n.toLocaleString('id-ID');
+
+    function updateROI() {
+      const portions = parseInt(slider.value, 10);
+      sliderLabel.textContent = portions + ' Porsi';
+
+      const omset = portions * 20000 * 30;
+      const hpp = omset * 0.45;
+      const gross = omset - hpp;
+      const net = gross - 5500000;
+
+      calcOmset.textContent = fmt(omset);
+      calcHpp.textContent = fmt(hpp);
+      calcNet.textContent = fmt(Math.max(net, 0));
+
+      if (net > 0) {
+        const bep = (22500000 / net).toFixed(1);
+        calcBep.textContent = 'Estimasi Balik Modal Paket Semi-Container: ~' + bep + ' Bulan';
+      } else {
+        calcBep.textContent = 'Perlu peningkatan target porsi di atas beban operasional.';
+      }
+    }
+
+    if (slider) {
+      slider.addEventListener('input', updateROI);
+      updateROI();
+    }
+  });
+</script>
+@endpush
