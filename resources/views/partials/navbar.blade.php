@@ -2,12 +2,12 @@
 @php
     $waLink = 'https://wa.me/'.config('site.whatsapp').'?text='.urlencode(config('site.whatsapp_text'));
     $navItems = [
-        ['label' => 'Beranda',            'route' => 'home',        'path' => 'beranda'],
-        ['label' => 'Menu & Varian',      'route' => null,          'path' => 'menu-populer'],
-        ['label' => 'Keunggulan',         'route' => null,          'path' => 'keunggulan'],
-        ['label' => 'Lokasi Outlet',      'route' => null,          'path' => 'outlet'],
-        ['label' => 'Tentang Kami',       'route' => null,          'path' => 'tentang'],
-        ['label' => 'Franchise',          'route' => 'partnership', 'path' => 'franchise'],
+        ['label' => 'Beranda',        'route' => 'home',        'anchor' => null],
+        ['label' => 'Menu & Varian',  'route' => 'menu',        'anchor' => null],
+        ['label' => 'Keunggulan',     'route' => 'home',        'anchor' => 'keunggulan'],
+        ['label' => 'Lokasi Outlet',  'route' => 'outlets',     'anchor' => null],
+        ['label' => 'Tentang Kami',   'route' => 'about',       'anchor' => null],
+        ['label' => 'Franchise',      'route' => 'partnership', 'anchor' => null],
     ];
 @endphp
 
@@ -76,8 +76,10 @@
             <nav class="max-w-[1280px] mx-auto px-margin py-3 flex flex-col gap-1">
                 @foreach($navItems as $item)
                     @php
-                        $isActive = $item['route'] && request()->routeIs($item['route']);
-                        $href = $item['route'] ? route($item['route']) : '#'.$item['path'];
+                        $isActive = $item['route'] && request()->routeIs($item['route']) && !$item['anchor'];
+                        $href = $item['route']
+                            ? route($item['route']) . ($item['anchor'] ? '#'.$item['anchor'] : '')
+                            : '#';
                     @endphp
                     <a href="{{ $href }}"
                        class="px-4 py-3 font-label-lg text-label-lg rounded-lg

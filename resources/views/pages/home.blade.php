@@ -99,21 +99,21 @@
 </section>
 
 {{-- ===================== STATS ===================== --}}
-@include('components.stats')
+@include('components.home.stats')
 
 {{-- ===================== KEUNGGULAN ===================== --}}
-@include('components.features')
+@include('components.home.features')
 
 {{-- ===================== MENU POPULER ===================== --}}
-@include('components.menu-section')
+@include('components.home.menu-section')
 
 {{-- ===================== STORY ===================== --}}
-@include('components.story')
+@include('components.home.story')
 
 {{-- ===================== OUTLET ===================== --}}
-@include('components.outlets')
+@include('components.home.outlets')
 
 {{-- ===================== FINAL CTA ===================== --}}
-@include('components.final-cta')
+@include('components.home.final-cta')
 
 @endsection
