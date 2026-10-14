@@ -55,13 +55,22 @@
                             ['yr'=>'23', 'color'=>'primary-container','year'=>'Tahun 2023 • Skala Nasional','badge'=>'35 Outlet',       'title'=>'Peluncuran Kemitraan Booth Terpadu',    'desc'=>'Membuka kemitraan franchise modern. Penetrasi Jabodetabek, Surabaya, dan Malang.'],
                             ['yr'=>'••', 'color'=>'surface-tint','year'=>'2024 — Sekarang • Lintas Pulau','badge'=>'50+ Gerai',       'title'=>'50+ Outlet & Produksi 500k Butir/Bulan','desc'=>'Menjangkau Jawa, Bali, Sumatra. Dipercaya 500k+ penikmat takoyaki tiap bulan.'],
                         ];
+
+                        // Kelas warna ditulis literal agar ter-generate Tailwind (tidak boleh dinamis).
+                        $tone = [
+                            'primary'           => 'bg-primary text-on-primary',
+                            'secondary'         => 'bg-secondary text-on-secondary',
+                            'tertiary'          => 'bg-tertiary text-on-tertiary',
+                            'primary-container' => 'bg-primary-container text-on-primary-container',
+                            'surface-tint'      => 'bg-surface-tint text-on-primary',
+                        ];
                     @endphp
 
                     <div class="space-y-6 relative">
                         @foreach($timeline as $i => $t)
                             <div class="flex items-start gap-4">
                                 <div class="flex flex-col items-center shrink-0">
-                                    <div class="w-10 h-10 rounded-full bg-{{ $t['color'] }} text-on-primary flex items-center justify-center font-bold text-[12px] shadow-sm">
+                                    <div class="w-10 h-10 rounded-full {{ $tone[$t['color']] }} flex items-center justify-center font-bold text-[12px] shadow-sm">
                                         {{ $t['yr'] }}
                                     </div>
                                     @if(!$loop->last)

@@ -13,11 +13,18 @@
                     ['no'=>'02','icon'=>'liquor','title'=>'Pilih Saus & Topping','desc'=>'Rasa Tare Klasik Osaka, pedas segar Sambal Matah Bali, atau lelehan Mentai Torched creamy.','color'=>'secondary'],
                     ['no'=>'03','icon'=>'lunch_dining','title'=>'Pesan & Santap Hangat','desc'=>'Pesan lewat GoFood/ShopeeFood/GrabFood atau kunjungi booth terdekat. Box ventilasi anti-melempem!','color'=>'tertiary'],
                 ];
+
+                // Kelas warna ditulis literal agar ter-generate Tailwind (tidak boleh dinamis).
+                $tone = [
+                    'primary'   => 'bg-primary/10 text-primary',
+                    'secondary' => 'bg-secondary/10 text-secondary',
+                    'tertiary'  => 'bg-tertiary/10 text-tertiary',
+                ];
             @endphp
             @foreach($steps as $s)
                 <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-3 relative">
                     <span class="absolute top-3 right-4 font-black text-[48px] text-surface-container-highest/70 select-none leading-none">{{ $s['no'] }}</span>
-                    <div class="w-12 h-12 rounded-xl bg-{{ $s['color'] }}/10 text-{{ $s['color'] }} flex items-center justify-center">
+                    <div class="w-12 h-12 rounded-xl {{ $tone[$s['color']] }} flex items-center justify-center">
                         <span class="material-symbols-outlined text-[26px]">{{ $s['icon'] }}</span>
                     </div>
                     <h3 class="text-[15px] font-bold text-on-surface">{{ $s['title'] }}</h3>

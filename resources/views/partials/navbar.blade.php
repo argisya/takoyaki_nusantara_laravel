@@ -5,7 +5,7 @@
         ['label' => 'Beranda',        'route' => 'home',        'anchor' => null],
         ['label' => 'Menu & Varian',  'route' => 'menu',        'anchor' => null],
         ['label' => 'Keunggulan',     'route' => 'home',        'anchor' => 'keunggulan'],
-        ['label' => 'Lokasi Outlet',  'route' => 'outlets',     'anchor' => null],
+        ['label' => 'Lokasi Outlet',  'route' => 'home',        'anchor' => 'outlet'],
         ['label' => 'Tentang Kami',   'route' => 'about',       'anchor' => null],
         ['label' => 'Franchise',      'route' => 'partnership', 'anchor' => null],
     ];
@@ -43,8 +43,10 @@
             <nav class="hidden xl:flex items-center gap-1">
                 @foreach($navItems as $item)
                     @php
-                        $isActive = $item['route'] && request()->routeIs($item['route']);
-                        $href = $item['route'] ? route($item['route']) : '#'.$item['path'];
+                        $isActive = $item['route'] && request()->routeIs($item['route']) && !$item['anchor'];
+                        $href = $item['route']
+                            ? route($item['route']) . ($item['anchor'] ? '#'.$item['anchor'] : '')
+                            : '#';
                     @endphp
                     <a href="{{ $href }}"
                        class="px-3 py-2 font-label-md text-label-md rounded-lg transition-colors

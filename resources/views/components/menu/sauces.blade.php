@@ -24,12 +24,20 @@
                 ['icon'=>'whatshot',    'title'=>'Torched Mentai Tobiko', 'desc'=>'Saus mentai berbutir telur ikan terbang dibakar dengan torch, aroma smoky karamel.','price'=>'+Rp 4.000','free'=>false,'color'=>'secondary'],
                 ['icon'=>'bakery_dining','title'=>'Mozzarella Cheese Melt','desc'=>'Lelehan keju mozzarella molor creamy, diselimutkan tebal di atas bola takoyaki panas.','price'=>'+Rp 5.000','free'=>false,'color'=>'secondary-container'],
             ];
+
+            // Kelas warna ditulis literal agar ter-generate Tailwind (tidak boleh dinamis).
+            $tone = [
+                'primary'             => 'bg-primary/10 text-primary',
+                'secondary'           => 'bg-secondary/10 text-secondary',
+                'primary-container'   => 'bg-primary-container/10 text-primary-container',
+                'secondary-container' => 'bg-secondary-container/10 text-secondary-container',
+            ];
         @endphp
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach($sauces as $s)
                 <div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex items-start gap-4">
-                    <div class="w-14 h-14 rounded-xl bg-{{ $s['color'] }}/10 text-{{ $s['color'] }} flex items-center justify-center shrink-0">
+                    <div class="w-14 h-14 rounded-xl {{ $tone[$s['color']] }} flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined text-[28px]">{{ $s['icon'] }}</span>
                     </div>
                     <div class="flex flex-col gap-1 flex-1">
