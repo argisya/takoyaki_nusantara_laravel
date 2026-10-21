@@ -15,7 +15,7 @@
             <div class="max-w-3xl">
                 <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-[10.5px] font-bold shadow-sm mb-3">
                     <span class="material-symbols-outlined text-[15px]">storefront</span>
-                    <span class="tracking-wide">Jaringan Nasional 50+ Booth Aktif</span>
+                    <span class="tracking-wide">Jaringan 7 Cabang Aktif</span>
                 </span>
                 <h1 class="text-[26px] md:text-[32px] font-bold text-on-surface tracking-tight">
                     Temukan Booth <span class="text-primary underline decoration-secondary-container decoration-wavy decoration-2">Takoyaki Nusantara</span> di Kotamu

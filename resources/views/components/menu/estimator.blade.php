@@ -20,21 +20,21 @@
                         Pilih Ukuran Paket
                     </label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="package-selector-group">
-                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="cicip"   onclick="setPackage('cicip', 15000, 'Paket Cicip Solo (4 Butir)')">
-                            <span class="text-[13px] block font-bold">4 Butir</span>
+                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="size_s" onclick="setPackage('size_s', 15000, 'Takoyaki Size S')">
+                            <span class="text-[13px] block font-bold">Size S</span>
                             <span class="text-[11px] text-on-surface-variant block">Rp 15.000</span>
                         </button>
-                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-primary-container text-on-primary-container shadow-md" data-pkg="reguler" onclick="setPackage('reguler', 20000, 'Paket Personal Reguler (6 Butir)')">
-                            <span class="text-[13px] block font-bold">6 Butir</span>
+                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-primary-container text-on-primary-container shadow-md" data-pkg="size_m" onclick="setPackage('size_m', 20000, 'Takoyaki Size M')">
+                            <span class="text-[13px] block font-bold">Size M</span>
                             <span class="text-[11px] block">Rp 20.000</span>
                         </button>
-                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="sharing" onclick="setPackage('sharing', 35000, 'Paket Sharing Berdua (10 Butir)')">
-                            <span class="text-[13px] block font-bold">10 Butir</span>
-                            <span class="text-[11px] text-on-surface-variant block">Rp 35.000</span>
+                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="size_l" onclick="setPackage('size_l', 30000, 'Takoyaki Size L')">
+                            <span class="text-[13px] block font-bold">Size L</span>
+                            <span class="text-[11px] text-on-surface-variant block">Rp 30.000</span>
                         </button>
-                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="party"   onclick="setPackage('party', 55000, 'Paket Keluarga Pesta (16 Butir Box)')">
-                            <span class="text-[13px] block font-bold">16 Butir Box</span>
-                            <span class="text-[11px] text-on-surface-variant block">Rp 55.000</span>
+                        <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="okonomiyaki" onclick="setPackage('okonomiyaki', 25000, 'Okonomiyaki')">
+                            <span class="text-[13px] block font-bold">Okonomiyaki</span>
+                            <span class="text-[11px] text-on-surface-variant block">Rp 25.000</span>
                         </button>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
 
                     <div class="flex flex-col gap-2 text-[12.5px] text-on-surface-variant">
                         <div class="flex justify-between text-on-surface">
-                            <span class="font-bold" id="summary-pkg-name">Paket Personal Reguler (6 Butir)</span>
+                            <span class="font-bold" id="summary-pkg-name">Takoyaki Size M</span>
                             <span class="font-bold" id="summary-pkg-price">Rp 20.000</span>
                         </div>
                         <div class="flex justify-between">

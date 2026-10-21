@@ -23,11 +23,11 @@
                 </span>
 
                 <h1 class="font-bold text-[30px] leading-tight sm:text-[36px] lg:text-[44px] tracking-tight">
-                    Satu Resep Juara, <span class="text-primary">Beragam Pilihan Paket</span> Sesuai Porsimu
+                    Satu Resep Juara, <span class="text-primary">Pilihan Ukuran S, M, L</span> & Okonomiyaki
                 </h1>
 
                 <p class="text-[15px] lg:text-[16px] text-on-surface-variant max-w-xl leading-relaxed">
-                    Kami hanya menyajikan satu formulasi terbaik: takoyaki otentik dengan gurita kenyal segar, adonan renyah gurih berpadu rempah Nusantara, <em class="not-italic text-primary font-bold">fresh dadakan</em> saat pesanan masuk.
+                    Kami menghadirkan takoyaki otentik berkualitas: crispy di luar dan creamy di dalam dengan pilihan Takoyaki Size S, M, L serta Okonomiyaki yang lezat, <em class="not-italic text-primary font-bold">fresh dadakan</em> saat pesanan masuk.
                 </p>
 
                 <div class="grid grid-cols-3 gap-2 pt-1">
@@ -36,27 +36,27 @@
                             <span class="material-symbols-outlined text-[16px]">verified</span>
                             <span class="text-[10px] font-bold uppercase">100% Halal</span>
                         </div>
-                        <span class="text-[11px] text-on-surface-variant">MUI & BPJPH</span>
+                        <span class="text-[11px] text-on-surface-variant">Bahan Pilihan</span>
                     </div>
                     <div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm">
                         <div class="flex items-center gap-1 text-primary">
-                            <span class="material-symbols-outlined text-[16px]">phishing</span>
-                            <span class="text-[10px] font-bold uppercase">Gurita Asli</span>
+                            <span class="material-symbols-outlined text-[16px]">cookie</span>
+                            <span class="text-[10px] font-bold uppercase">Crispy</span>
                         </div>
-                        <span class="text-[11px] text-on-surface-variant">Potongan Utuh</span>
+                        <span class="text-[11px] text-on-surface-variant">Renyah Luar</span>
                     </div>
                     <div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm">
                         <div class="flex items-center gap-1 text-secondary">
-                            <span class="material-symbols-outlined text-[16px]">skillet</span>
-                            <span class="text-[10px] font-bold uppercase">Live Cooked</span>
+                            <span class="material-symbols-outlined text-[16px]">bakery_dining</span>
+                            <span class="text-[10px] font-bold uppercase">Creamy</span>
                         </div>
-                        <span class="text-[11px] text-on-surface-variant">Hangat & Garing</span>
+                        <span class="text-[11px] text-on-surface-variant">Lembut Dalam</span>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-3 pt-1">
                     <a href="#daftar-paket" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-on-primary px-5 py-2.5 rounded-xl shadow-md transition-all text-[13.5px] font-semibold">
-                        <span>Lihat 4 Pilihan Paket</span>
+                        <span>Lihat Pilihan Menu</span>
                         <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
                     </a>
                     <a href="#sauce-selector" class="inline-flex items-center gap-2 bg-surface-container-lowest text-on-surface hover:text-primary px-5 py-2.5 rounded-xl shadow-sm transition-colors text-[13.5px] font-semibold">

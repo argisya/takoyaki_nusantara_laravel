@@ -1,9 +1,9 @@
 {{-- resources/views/pages/menu.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Menu & Varian - Takoyaki Nusantara | Paket 4, 6, 10, 16 Butir')
-@section('meta_description', 'Katalog lengkap Takoyaki Nusantara: paket 4/6/10/16 butir dengan pilihan saus Tare Osaka, Sambal Matah Bali, Mentai Torched. Mulai Rp 15.000. Halal 100%.')
-@section('meta_keywords', 'menu takoyaki, paket takoyaki, harga takoyaki, takoyaki mentai, takoyaki sambal matah, takoyaki halal')
+@section('title', 'Menu & Varian - Takoyaki Nusantara | Takoyaki Size S, M, L & Okonomiyaki')
+@section('meta_description', 'Katalog lengkap Takoyaki Nusantara: Takoyaki pilihan ukuran Size S, M, L dan Okonomiyaki autentik dengan tekstur crispy di luar, creamy di dalam. 100% Halal.')
+@section('meta_keywords', 'menu takoyaki, takoyaki size s, takoyaki size m, takoyaki size l, okonomiyaki, takoyaki halal')
 
 @section('content')
 
@@ -21,8 +21,8 @@
 <script>
   // ==== Live Order Estimator ====
   let currentPackage = {
-    id: 'reguler',
-    name: 'Paket Personal Reguler (6 Butir)',
+    id: 'size_m',
+    name: 'Takoyaki Size M',
     basePrice: 20000
   };
   let selectedAddons = {};

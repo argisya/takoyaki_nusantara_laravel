@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('title', 'Tentang Kami - Takoyaki Nusantara | Profil Resmi Perusahaan')
-@section('meta_description', 'Profil resmi Takoyaki Nusantara — brand street food fusion nomor 1 di Indonesia. Perjalanan sejak 2020 dari gerobak di Yogyakarta hingga 50+ outlet di 12 kota.')
+@section('meta_description', 'Profil resmi Takoyaki Nusantara — didirikan tahun 2024 oleh mahasiswa, kini berkembang menjadi brand kuliner dengan 7 cabang aktif dan peluang kemitraan.')
 @section('meta_keywords', 'tentang takoyaki nusantara, profil perusahaan, brand story takoyaki, franchise takoyaki halal')
 
 @section('content')

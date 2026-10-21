@@ -1,7 +1,7 @@
 {{-- resources/views/pages/outlets.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Lokasi Outlet - Takoyaki Nusantara | 50+ Cabang di 12 Kota')
+@section('title', 'Lokasi Outlet - Takoyaki Nusantara | 7 Cabang Aktif')
 @section('meta_description', 'Temukan outlet Takoyaki Nusantara terdekat: Jakarta, Bandung, Yogyakarta, Surabaya, Bali. Pesan via WhatsApp outlet langsung atau GoFood/ShopeeFood.')
 @section('meta_keywords', 'lokasi takoyaki, outlet takoyaki, cabang takoyaki, alamat takoyaki, takoyaki terdekat')
 

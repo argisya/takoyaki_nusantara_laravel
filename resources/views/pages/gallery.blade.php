@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('title', 'Galeri & Dokumentasi - Takoyaki Nusantara | Booth, Event, & Momen')
-@section('meta_description', 'Galeri foto & video Takoyaki Nusantara: dokumentasi festival kuliner, booth mitra, dapur sentral halal, dan momen pelanggan di 50+ outlet.')
+@section('meta_description', 'Galeri foto & video Takoyaki Nusantara: dokumentasi booth, dapur higienis halal, dan momen pelanggan di 7 cabang aktif.')
 @section('meta_keywords', 'galeri takoyaki, dokumentasi booth takoyaki, video takoyaki, event kuliner, franchise takoyaki')
 
 @section('content')

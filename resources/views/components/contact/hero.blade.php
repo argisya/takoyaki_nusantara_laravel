@@ -37,7 +37,7 @@
                         $chips = [
                             ['icon'=>'bolt',        'title'=>'Rata-rata Respon', 'value'=>'< 15 Menit via WA', 'color'=>'primary'],
                             ['icon'=>'verified',    'title'=>'Status Sertifikasi','value'=>'100% Halal Indonesia','color'=>'secondary'],
-                            ['icon'=>'storefront',  'title'=>'Cakupan Wilayah',  'value'=>'50+ Outlet Aktif',   'color'=>'tertiary'],
+                            ['icon'=>'storefront',  'title'=>'Cakupan Wilayah',  'value'=>'7 Cabang Aktif',   'color'=>'tertiary'],
                         ];
                     @endphp
                     @foreach($chips as $c)

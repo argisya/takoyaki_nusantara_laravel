@@ -1,55 +1,55 @@
 <section class="w-full max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-6 pb-3" id="daftar-paket">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
         <div class="flex flex-col gap-2">
-            <span class="text-[10px] text-primary font-bold tracking-widest uppercase">Pilihan Porsi Lengkap</span>
-            <h2 class="text-[26px] lg:text-[32px] font-bold tracking-tight">Katalog Paket Takoyaki</h2>
+            <span class="text-[10px] text-primary font-bold tracking-widest uppercase">Pilihan Menu Lengkap</span>
+            <h2 class="text-[26px] lg:text-[32px] font-bold tracking-tight">Katalog Takoyaki & Okonomiyaki</h2>
             <p class="text-[13.5px] text-on-surface-variant max-w-2xl">
-                Rasa dan kualitas isian sama mewahnya. Tentukan porsi yang pas untuk ngemil santai, makan siang, sampai pesta bersama keluarga.
+                Nikmati Takoyaki dalam pilihan ukuran Size S, M, dan L dengan tekstur crispy di luar & creamy di dalam, serta Okonomiyaki lezat khas Jepang.
             </p>
         </div>
         <div class="bg-surface-container-high px-3 py-1.5 rounded-xl flex items-center gap-2 text-on-surface-variant max-w-xs">
             <span class="material-symbols-outlined text-primary text-[16px]">info</span>
-            <span class="text-[11px]">Semua paket termasuk Saus Tare + Katsuobushi melimpah</span>
+            <span class="text-[11px]">Semua menu disajikan hangat dengan Katsuobushi melimpah</span>
         </div>
     </div>
 
     @php
         $packages = [
             [
-                'id'=>'cicip', 'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuC6tknuJ7ZiZabuwFLtA2MH8zphVSuM1_cYHQdzm79vI3F-rxLRY7qE0HpbUVBgb0BMJePCqZUbW9NQ0HlqWx7so7A21btXBsWFu8dkBJjiwVefXTMfP8Nyb3Z-WoIl1cRMk5Ms-WkZaKrCpI3p8kKdrSlPpKHcOMD9DnUgCwaprlmVkqqS4oYwPBG0BhEvzmXxu8VjIiPgpJtKUyRCdQ6wFHOPUDGGISUJNqH2jUljrHwbfmJEDLV0',
-                'badge'=>'Porsi Cicip', 'badgeStyle'=>'bg-white/90 text-on-surface-variant',
-                'pill'=>'4 Butir', 'name'=>'Paket Cicip Solo',
-                'desc'=>'Porsi pas untuk santap solo atau pengganjal lapar sore.',
-                'noteIcon'=>'check_circle', 'noteText'=>'Free Tare Klasik + Mayo + Bonito',
-                'price'=>'15.000', 'perButir'=>'Rp 3.750 / butir', 'strike'=>null,
-                'cta'=>'Pilih Paket Ini', 'highlight'=>false,
+                'id'=>'size_s', 'img'=>asset('images/produk-1.webp'),
+                'badge'=>'Porsi Praktis', 'badgeStyle'=>'bg-white/90 text-on-surface-variant',
+                'pill'=>'Size S', 'name'=>'Takoyaki Size S',
+                'desc'=>'Porsi personal praktis yang pas untuk ngemil santai atau pengganjal lapar.',
+                'noteIcon'=>'check_circle', 'noteText'=>'Free Saus Spesial + Katsuobushi',
+                'price'=>'15.000', 'perButir'=>'Porsi Personal Ringan', 'strike'=>null,
+                'cta'=>'Pilih Ukuran Ini', 'highlight'=>false,
             ],
             [
-                'id'=>'reguler', 'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuBfGvCcH1s9LOfRXE05OohDbclNiODPxQnomGJ2O3k4tLGfRpTm_K7DJ1nwqijwVwy9WMgiA13VtHejjmMQvapIgbT3GQ8CMP_llGABPW8u_w1Gfgn4lu9mY0pCrY6JVp-VButfBGD0bkWbluNo62SvDT_JdSyFRVbdSBJ2AjIAAQpvJJ8iSy13lN3iE6HWZpwnm0ko4Aov5weY18Qu914cpQndBmk1s4Yvc6x2NxwG9a8XOcteOlFP',
-                'badge'=>'Hemat 9%', 'badgeStyle'=>'bg-primary text-on-primary',
-                'pill'=>'6 Butir', 'name'=>'Paket Personal Reguler',
-                'desc'=>'Menu paling laris! Porsi pas untuk satu orang, kenyang nikmat.',
+                'id'=>'size_m', 'img'=>asset('images/produk-2.webp'),
+                'badge'=>'Best Seller', 'badgeStyle'=>'bg-primary text-on-primary',
+                'pill'=>'Size M', 'name'=>'Takoyaki Size M',
+                'desc'=>'Ukuran sedang paling diminati! Porsi pas mengenyangkan dengan tekstur creamy khas.',
                 'noteIcon'=>'thumb_up', 'noteText'=>'Pilihan #1 Pelanggan Setia',
-                'price'=>'20.000', 'perButir'=>'Rp 3.333 / butir', 'strike'=>'Rp 22.000',
-                'cta'=>'Pilih Paket Ini', 'highlight'=>true, 'ribbon'=>'TERPOPULER • BEST VALUE',
+                'price'=>'20.000', 'perButir'=>'Porsi Sedang Favorit', 'strike'=>null,
+                'cta'=>'Pilih Ukuran Ini', 'highlight'=>true, 'ribbon'=>'TERPOPULER • BEST VALUE',
             ],
             [
-                'id'=>'sharing', 'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuBUD3Ce8RvO2iAPWatciFHGcRs0WqG5w55Kw1basq7FtZK8UUzuvmU_UvCbCtYkH3zA6wTc9IjeLoZ0c61RRtbAP-thlydCkqMqWTlcCO_KeVUsY7mWKQELKwAf59am53gRq8sramEU_sWDKAWcEo1Pm-uo1MnsEAq21y3EZIdTmSaQVSAzurNw3vXJx22UtL9w2V2FQsAgZtPz5QVCZvlOp8Epz5T6nNEGpQYmfc-18gwMq1u_NM8t',
-                'badge'=>'Hemat Rp 5.000', 'badgeStyle'=>'bg-tertiary text-on-tertiary',
-                'pill'=>'10 Butir', 'name'=>'Paket Sharing Berdua',
-                'desc'=>'Puas berdua atau traktiran seru bareng sahabat saat ngobrol sore.',
-                'noteIcon'=>'group', 'noteText'=>'Bisa split 2 rasa topping saus',
-                'price'=>'35.000', 'perButir'=>'Rp 3.500 / butir', 'strike'=>'Rp 40.000',
-                'cta'=>'Pilih Paket Ini', 'highlight'=>false,
+                'id'=>'size_l', 'img'=>asset('images/produk-3.webp'),
+                'badge'=>'Porsi Puas', 'badgeStyle'=>'bg-tertiary text-on-tertiary',
+                'pill'=>'Size L', 'name'=>'Takoyaki Size L',
+                'desc'=>'Ukuran besar yang pas untuk dinikmati bersama teman atau keluarga dengan saus berlimpah.',
+                'noteIcon'=>'group', 'noteText'=>'Porsi Puas / Sharing',
+                'price'=>'30.000', 'perButir'=>'Porsi Puas Sharing', 'strike'=>null,
+                'cta'=>'Pilih Ukuran Ini', 'highlight'=>false,
             ],
             [
-                'id'=>'party', 'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuBCCUgvf0wqr_8o47AI8heemsHfpXx7ttUhYeoYhfWFqz9uhN7YxGSXssfo1TgHin1caM7BmvK2WrNp7OniKuQyypltoK1W8XJxkewxxOhHJ6bqStYzEOG-dqGlU51GFQkTuspD56ossM1FSbFZGqt0P7qlRmzM9AOHI1EbuaUL28P3WEAgsPrd9oWgd0tGAsNVk-Pt1EBajkrM4oYN4SnsPRFoWDVdMVzZuUJWW6H0ED9E8btVlJuu',
-                'badge'=>'Spesial Box', 'badgeStyle'=>'bg-primary-container text-on-primary-container',
-                'pill'=>'16 Butir Box', 'name'=>'Paket Keluarga Pesta',
-                'desc'=>'Box eksklusif ventilasi khusus. Sajian mewah untuk kumpul keluarga & acara.',
-                'noteIcon'=>'celebration', 'noteText'=>'Bonus Box Eksklusif & Sumpit Kayu',
-                'price'=>'55.000', 'perButir'=>'Super Hemat Rp 10.000', 'strike'=>'Rp 65.000',
-                'cta'=>'Pilih Paket Ini', 'highlight'=>false,
+                'id'=>'okonomiyaki', 'img'=>asset('images/menu-tako.webp'),
+                'badge'=>'Menu Spesial', 'badgeStyle'=>'bg-primary-container text-on-primary-container',
+                'pill'=>'Japanese Pancake', 'name'=>'Okonomiyaki',
+                'desc'=>'Pancake gurih khas Jepang dengan paduan sayuran segar, adonan telur lembut, dan saus otentik.',
+                'noteIcon'=>'restaurant', 'noteText'=>'Saus Gurih + Mayo + Katsuobushi',
+                'price'=>'25.000', 'perButir'=>'Porsi Lengkap Mengenyangkan', 'strike'=>null,
+                'cta'=>'Pilih Menu Ini', 'highlight'=>false,
             ],
         ];
     @endphp

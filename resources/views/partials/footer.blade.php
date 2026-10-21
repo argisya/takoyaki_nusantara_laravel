@@ -15,8 +15,8 @@
 
             <div class="flex flex-col gap-2">
                 <h4 class="font-bold text-[15px]">Jaringan Outlet</h4>
-                <p class="text-[13px] text-on-surface-variant">50+ outlet di Jakarta, Bandung, Surabaya, Yogyakarta, Bali.</p>
-                <a href="#outlet" class="text-[12px] text-primary font-bold">Cari Cabang →</a>
+                <p class="text-[13px] text-on-surface-variant">7 cabang aktif di berbagai lokasi strategis.</p>
+                <a href="{{ route('outlets') }}" class="text-[12px] text-primary font-bold">Cari Cabang →</a>
             </div>
 
             <div class="flex flex-col gap-2">

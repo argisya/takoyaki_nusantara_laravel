@@ -7,7 +7,7 @@
                 <p class="text-[12.5px] text-on-surface-variant">Pilih booth untuk melihat fasilitas, navigasi Maps, atau chat langsung via WhatsApp Outlet.</p>
             </div>
             <span id="outlet-count-badge" class="text-[12px] bg-surface-container text-on-surface-variant px-4 py-2 rounded-full font-semibold">
-                Menampilkan 6 Outlet Utama
+                Menampilkan 7 Cabang Aktif
             </span>
         </div>
 
@@ -37,7 +37,7 @@
                 ],
                 [
                     'city'=>'yogyakarta', 'cityLabel'=>'DI Yogyakarta', 'name'=>'Outlet Malioboro Hub',
-                    'badge'=>'Birthplace 2020', 'badgeColor'=>'bg-secondary text-on-secondary',
+                    'badge'=>'Cabang Utama', 'badgeColor'=>'bg-secondary text-on-secondary',
                     'rating'=>'5.0', 'reviewCount'=>'610+',
                     'address'=>'Jl. Malioboro No. 115, Sosromenduran, Gedong Tengen, Kota Yogyakarta 55271',
                     'hours'=>'Setiap Hari | 10:00 - 23:00 WIB',
@@ -78,6 +78,17 @@
                     'wa'=>'6281933445566', 'waLabel'=>'+62 819-3344-5566',
                     'maps'=>'https://maps.google.com/?q=Takoyaki+Nusantara+Dewi+Sri+Bali',
                     'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuCUR6_UWAMf5-esM0JNVQri3Y8iUL9g-P73DCUqT3Om-jpAbCx-27uhCn05XYFAOkn9dizzOJsx2Si-jdR-dsvRjyjGwWj3R_ftq-IuiInCXBzUYABEh11sMWm8EDLSCHuYY7RTXSQj2JYdqzqQz1a5MQlOkCwOh1IvF7EQLLe6FmUnbVUdFL74AcQExpQDQcwgp-MPAR0olxtwm4jjA2OqKiYlkyAA6yeFDvzFXe3mJUGSbPVdEOam',
+                ],
+                [
+                    'city'=>'jakarta', 'cityLabel'=>'Jakarta Timur', 'name'=>'Outlet Rawamangun Hub',
+                    'badge'=>'Cabang Baru', 'badgeColor'=>'bg-tertiary text-on-tertiary',
+                    'rating'=>'4.9', 'reviewCount'=>'195+',
+                    'address'=>'Jl. Balai Pustaka Timur No. 28, Rawamangun, Pulo Gadung, Jakarta Timur 13220',
+                    'hours'=>'Setiap Hari | 10:00 - 22:00 WIB',
+                    'facilities'=>['Takeaway Cepat','Parkir Motor & Mobil','QRIS Siap'],
+                    'wa'=>'6281288991122', 'waLabel'=>'+62 812-8899-1122',
+                    'maps'=>'https://maps.google.com/?q=Takoyaki+Nusantara+Rawamangun',
+                    'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuB7jdrY-aKb2eQjAWxSuXPJHRt05sCaCZXwiHW_9R7mrwAuwUH_zPp8uq4Vr3HmsWZ9JYPaYEXWIMtY5AYo4PudBUChegfQbAPlCMEuKN2x-_ud3RY0S0Rfe-aaGVhRiIHnFmeQ0BSdA4pKkGoW53giPz2o_D1Gz7Q2-5iqpw1YfcbkeK0apedPIqp9zCAcRUe98QHn_w8LdS_LLPwyCIcHUJK2DRW0TWB7IALtTBMGGX8m4uLhWP86',
                 ],
             ];
         @endphp

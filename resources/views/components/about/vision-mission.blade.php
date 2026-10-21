@@ -7,18 +7,18 @@
                 <div class="relative z-10">
                     <span class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full mb-5">
                         <span class="material-symbols-outlined text-secondary-fixed text-[18px]">visibility</span>
-                        <span class="text-[11px] text-secondary-fixed uppercase font-bold tracking-widest">Visi Masa Depan</span>
+                        <span class="text-[11px] text-secondary-fixed uppercase font-bold tracking-widest">Visi Kami</span>
                     </span>
-                    <h3 class="text-[24px] lg:text-[28px] font-bold text-inverse-on-surface tracking-tight mb-4 leading-tight">
-                        Menjadi Icon Street Food Fusion Nomor 1 di Asia Tenggara
+                    <h3 class="text-[22px] lg:text-[26px] font-bold text-inverse-on-surface tracking-tight mb-4 leading-snug">
+                        Membangun Bisnis Kemitraan yang Berkelanjutan & Saling Menguntungkan
                     </h3>
-                    <p class="text-[14px] text-inverse-on-surface/80 leading-relaxed">
-                        Menjadi jaringan brand kuliner street food fusion terdepan dan terpercaya di Asia Tenggara yang menjunjung tinggi kehalalan, kualitas rasa, dan kebahagiaan pelanggan melalui setiap butiran takoyaki.
+                    <p class="text-[14.5px] text-inverse-on-surface/90 leading-relaxed">
+                        Menggandeng setiap mitra, kami membangun sistem bisnis yang saling menguntungkan dan berkelanjutan, dengan tujuan menghadirkan produk yang relevan dengan keinginan pasar, menjaga kualitas, serta memperluas jangkauan brand ke seluruh Indonesia.
                     </p>
                 </div>
-                <div class="mt-8 bg-white/5 p-3 rounded-xl flex items-center justify-between relative z-10">
-                    <span class="text-[12px] text-secondary-fixed">Target Jaringan 2026</span>
-                    <span class="text-[14px] font-bold">150+ Cabang</span>
+                <div class="mt-8 bg-white/5 p-3.5 rounded-xl flex items-center justify-between relative z-10 border border-white/10">
+                    <span class="text-[12px] text-secondary-fixed font-semibold">Komitmen Kemitraan</span>
+                    <span class="text-[13px] font-bold text-inverse-on-surface">Jangkauan Seluruh Indonesia</span>
                 </div>
             </div>
 
@@ -29,24 +29,44 @@
                     <span class="text-[11px] text-primary uppercase font-bold tracking-widest">Misi Kami</span>
                 </span>
                 <h3 class="text-[22px] lg:text-[26px] font-bold text-on-surface tracking-tight mb-6 leading-tight">
-                    Empat Langkah Nyata Mewujudkan Cita Rasa Bermutu
+                    Empat Komitmen Utama Mewujudkan Pertumbuhan Bersama
                 </h3>
 
                 @php
                     $missions = [
-                        ['no'=>1, 'title'=>'Standardisasi & Halal',   'desc'=>'Kuliner street food khas Jepang dengan standar kebersihan tinggi dan jaminan halal 100% tanpa kompromi.'],
-                        ['no'=>2, 'title'=>'Inovasi Rempah Lokal',    'desc'=>'Bereksplorasi mengangkat cita rasa bumbu Nusantara ke olahan jajanan modern bertaraf internasional.'],
-                        ['no'=>3, 'title'=>'Pemberdayaan UMKM',       'desc'=>'Membuka kemitraan inklusif bagi wirausaha daerah dan menyerap ratusan tenaga kerja lokal.'],
-                        ['no'=>4, 'title'=>'Aksesibilitas Digital',   'desc'=>'Memudahkan konsumen menikmati hidangan lewat integrasi aplikasi online terkemuka.'],
+                        [
+                            'no' => 1,
+                            'title' => 'Peluang Wirausaha Terjangkau',
+                            'desc' => 'Memberikan kesempatan berwirausaha dengan modal terjangkau dan minim risiko.'
+                        ],
+                        [
+                            'no' => 2,
+                            'title' => 'Pelatihan & Pendampingan',
+                            'desc' => 'Menyediakan pelatihan, pendampingan, dan dukungan bisnis yang berkesinambungan.'
+                        ],
+                        [
+                            'no' => 3,
+                            'title' => 'Inovasi Produk Relevan',
+                            'desc' => 'Menghadirkan inovasi produk yang relevan dengan keinginan pasar.'
+                        ],
+                        [
+                            'no' => 4,
+                            'title' => 'Kemitraan Berkelanjutan',
+                            'desc' => 'Menjalin kemitraan yang saling menguntungkan dan berkelanjutan.'
+                        ],
                     ];
                 @endphp
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     @foreach($missions as $m)
-                        <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
-                            <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold mb-2">{{ $m['no'] }}</div>
-                            <h4 class="text-[14px] font-bold text-on-surface">{{ $m['title'] }}</h4>
-                            <p class="text-[12px] text-on-surface-variant mt-1 leading-relaxed">{{ $m['desc'] }}</p>
+                        <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-[13px] mb-2.5">
+                                    {{ $m['no'] }}
+                                </div>
+                                <h4 class="text-[14px] font-bold text-on-surface">{{ $m['title'] }}</h4>
+                                <p class="text-[12.5px] text-on-surface-variant mt-1.5 leading-relaxed">{{ $m['desc'] }}</p>
+                            </div>
                         </div>
                     @endforeach
                 </div>

@@ -18,7 +18,7 @@
     <div class="w-full bg-secondary-container text-on-secondary-container px-gutter py-1.5 flex items-center justify-center gap-2">
         <span class="material-symbols-outlined text-[16px]">campaign</span>
         <p class="font-label-sm text-label-sm text-center tracking-wide">
-            🎉 Promo Spesial: Gratis Ongkir &amp; Diskon 20% Pembelian Pertama!
+            🎉 Excellence in Every Bite
         </p>
     </div>
 
@@ -29,7 +29,7 @@
             {{-- Logo --}}
             <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
                 <img alt="Logo Takoyaki Nusantara" class="h-9 w-9 object-contain" 
-                     src="{{ asset('images/logo.png') }}">
+                     src="{{ asset('images/logo-takonusantara.webp') }}">
                 <div class="flex flex-col leading-tight">
                     <span class="font-headline-sm text-[16px] md:text-headline-sm text-primary tracking-tight">
                         {{ config('site.name') }}

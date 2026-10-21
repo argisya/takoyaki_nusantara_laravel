@@ -4,10 +4,10 @@
 
             @php
                 $stats = [
-                    ['icon'=>'storefront',      'badge'=>'Sejak 2020',  'value'=>'Didirikan 2020', 'sub'=>'Perjalanan Inspiratif',   'desc'=>'Berawal dari 1 gerobak kayu Dotonbori di Yogyakarta.',  'color'=>'primary'],
-                    ['icon'=>'pin_drop',        'badge'=>'12 Kota Besar','value'=>'50+ Outlet',     'sub'=>'Cakupan Nasional',       'desc'=>'Titik strategis Jawa, Bali, dan Sumatera.',              'color'=>'secondary'],
-                    ['icon'=>'verified_user',   'badge'=>'Resmi Halal',  'value'=>'100% Halal',     'sub'=>'BPJPH & LPPOM MUI',      'desc'=>'Tanpa mirin, sake, atau lemak hewani haram.',            'color'=>'tertiary'],
-                    ['icon'=>'set_meal',        'badge'=>'Segar Harian', 'value'=>'500k+ Butir',    'sub'=>'Perputaran Bulanan',     'desc'=>'Tako segar harian & saus racikan autentik.',             'color'=>'primary'],
+                    ['icon'=>'storefront',      'badge'=>'Sejak 2024',  'value'=>'Tahun 2024',     'sub'=>'Awal Perjalanan',        'desc'=>'Berawal dari inisiatif wirausaha mahasiswa mandiri.',    'color'=>'primary'],
+                    ['icon'=>'pin_drop',        'badge'=>'Berkembang',  'value'=>'7 Cabang',       'sub'=>'Outlet Aktif',           'desc'=>'Tersebar di lokasi strategis & siap bermitra.',           'color'=>'secondary'],
+                    ['icon'=>'verified_user',   'badge'=>'Kualitas Mutu','value'=>'100% Halal',    'sub'=>'Higienis & Terjamin',    'desc'=>'Bahan baku pilihan dan selalu terjaga mutunya.',          'color'=>'tertiary'],
+                    ['icon'=>'skillet',        'badge'=>'Khas Autentik','value'=>'Crispy & Creamy','sub'=>'Karakter Produk',        'desc'=>'Sensasi renyah di luar, lembut creamy di dalam.',         'color'=>'primary'],
                 ];
 
                 // Kelas warna ditulis literal agar ter-generate Tailwind (tidak boleh dinamis).

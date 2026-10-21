@@ -5,7 +5,7 @@
 
 {{-- SEO Dasar --}}
 <title>@yield('title', config('site.name').' - '.config('site.tagline'))</title>
-<meta name="description" content="@yield('meta_description', 'Takoyaki Nusantara — street food Jepang otentik dengan cita rasa rempah nusantara. 50+ outlet, 100% halal, pesan online via GoFood, ShopeeFood, GrabFood.')">
+<meta name="description" content="@yield('meta_description', 'Takoyaki Nusantara — street food Jepang otentik dengan cita rasa rempah nusantara. 7 cabang aktif, 100% halal, pesan online via GoFood, ShopeeFood, GrabFood.')">
 <meta name="keywords" content="@yield('meta_keywords', 'takoyaki, takoyaki jakarta, takoyaki halal, street food jepang, umkm kuliner, franchise takoyaki')">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{{ url()->current() }}">

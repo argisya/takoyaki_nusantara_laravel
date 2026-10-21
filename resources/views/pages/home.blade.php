@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('title', 'Takoyaki Nusantara - Takoyaki Jepang Otentik Rasa Rempah Nusantara')
-@section('meta_description', 'Takoyaki Jepang otentik dengan cita rasa rempah nusantara. 50+ outlet, 100% halal. Pesan via WhatsApp, GoFood, ShopeeFood.')
+@section('meta_description', 'Takoyaki Jepang otentik dengan cita rasa rempah nusantara. 7 cabang aktif, 100% halal. Pesan via WhatsApp, GoFood, ShopeeFood.')
 
 @section('content')
 
@@ -71,7 +71,7 @@
                     <div class="rounded-2xl overflow-hidden relative aspect-[4/3] bg-surface-container-highest">
                         <img alt="Takoyaki Nusantara" 
                              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                             src="https://lh3.googleusercontent.com/aida/AEtjO1WTr9sZy5VBJcnKTdt1AQlX4tVcON5qX65NBntNcBK3q_CNQ-a-O_EJjG9mCqXW77zd5dZAvlmICc_nBESyMG6An4gHaTQsMbPXS4QPNkPIfly1NDcZ9NjsgF9JXyZnULliX3XYu6kykiiMheWlxHEVMhhEMZRp81p1Bo5i_Cm1-fN2z1nSVlADv18U5ua9sRV0fsF9vCgUiXzhLH2wl8Vq5A2ygvdD8bp7iixcBHsHg7D3vlGYmrgs9Ik">
+                             src="{{ asset('images/banner-tako.webp') }}">
                     </div>
 
                     {{-- Badge Rating --}}

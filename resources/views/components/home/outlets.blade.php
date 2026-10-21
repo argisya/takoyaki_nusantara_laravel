@@ -5,7 +5,7 @@
             align="left"
             label="Jaringan Cabang"
             title="Temukan Outlet di Kotamu"
-            subtitle="Hadir di 50+ lokasi strategis di 12 kota besar." />
+            subtitle="Hadir di 7 cabang aktif di berbagai lokasi strategis." />
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             @php

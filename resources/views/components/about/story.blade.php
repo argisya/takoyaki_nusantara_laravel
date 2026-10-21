@@ -5,13 +5,15 @@
             {{-- Story + Quote --}}
             <div class="lg:col-span-5 flex flex-col gap-6">
                 <div class="flex flex-col gap-4">
-                    <span class="text-[11px] text-primary uppercase tracking-widest font-bold">Kisah Kami</span>
+                    <span class="text-[11px] text-primary uppercase tracking-widest font-bold">Tentang Kami</span>
                     <h2 class="text-[26px] lg:text-[32px] font-bold text-on-surface tracking-tight leading-tight">
-                        Bermula Dari Gerobak Kayu di Sudut Kota Pelajar
+                        Berawal dari Keinginan untuk Berwirausaha
                     </h2>
                     <div class="flex flex-col gap-3 text-[14px] text-on-surface-variant leading-relaxed">
-                        <p>Kisah Takoyaki Nusantara bermula pada penghujung tahun 2020 di Yogyakarta. Dua sahabat karib yang menggemari kuliner jalanan Dotonbori menyadari satu hal: takoyaki di Indonesia sering memakai sosis biasa, teksturnya lembek, atau harganya terlampau mahal.</p>
-                        <p>Dengan tekad menghadirkan kuliner otentik Jepang berkualitas bintang lima dengan harga ramah kantong, mereka meracik adonan khusus dipadukan rempah lokal. Resep adonan berkulit garing keemasan dengan gurita kenyal asli seketika memikat lidah.</p>
+                        <p>Takoyaki Nusantara berdiri pada tahun 2024, berawal dari keinginan seorang mahasiswa untuk membangun usaha kuliner yang tidak hanya menghasilkan keuntungan, tetapi juga memiliki potensi untuk berkembang dan memberikan manfaat bagi lebih banyak orang.</p>
+                        <p>Dengan memulai dari skala kecil, Takoyaki Nusantara terus belajar memahami selera pasar, mengembangkan kualitas produk, serta membangun sistem operasional yang lebih baik.</p>
+                        <p>Seiring berjalannya waktu, usaha ini terus berkembang melalui pengembangan produk, peningkatan sistem operasional, serta pembukaan outlet di berbagai lokasi.</p>
+                        <p>Saat ini, Takoyaki Nusantara telah berkembang menjadi brand kuliner dengan 7 cabang aktif dan mulai membuka kesempatan bagi masyarakat untuk ikut tumbuh melalui sistem kemitraan.</p>
                     </div>
                 </div>
 
@@ -27,33 +29,56 @@
                 <blockquote class="bg-surface-container p-5 rounded-2xl shadow-sm relative overflow-hidden">
                     <span class="material-symbols-outlined text-outline-variant text-[60px] absolute -right-2 -bottom-2 opacity-40">format_quote</span>
                     <p class="text-[15px] italic relative z-10 leading-snug text-on-surface">
-                        "Kami ingin setiap butir takoyaki tidak hanya memanjakan lidah, tapi juga menghadirkan kebahagiaan dan kehangatan tradisi dua budaya dalam satu gigitan renyah."
+                        "Kami percaya bahwa bisnis yang baik bukan hanya tentang menjual produk, tetapi juga tentang menciptakan sistem yang dapat berkembang, menjaga kualitas, dan memberikan peluang bagi lebih banyak orang."
                     </p>
                     <div class="mt-4 flex items-center gap-3 relative z-10">
                         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-[13px]">TN</div>
                         <div class="leading-tight">
-                            <p class="text-[12px] font-bold">Founder & Head Chef</p>
-                            <p class="text-[11px] text-on-surface-variant">Takoyaki Nusantara Team</p>
+                            <p class="text-[12px] font-bold">Founder</p>
+                            <p class="text-[11px] text-on-surface-variant">Takoyaki Nusantara</p>
                         </div>
                     </div>
                 </blockquote>
             </div>
 
-            {{-- Timeline Milestones --}}
+            {{-- Timeline Perkembangan Kami --}}
             <div class="lg:col-span-7 flex flex-col justify-center">
                 <div class="bg-surface-container-low p-6 md:p-8 rounded-2xl">
                     <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-[20px] font-bold text-on-surface">Peta Perjalanan (Milestones)</h3>
-                        <span class="text-[10px] bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded-full uppercase tracking-wider font-semibold">2020 — 2025</span>
+                        <h3 class="text-[20px] font-bold text-on-surface">Perkembangan Kami</h3>
+                        <span class="text-[10px] bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded-full uppercase tracking-wider font-semibold">2024 — Sekarang</span>
                     </div>
 
                     @php
                         $timeline = [
-                            ['yr'=>'20', 'color'=>'primary',   'year'=>'Tahun 2020 • Yogyakarta',      'badge'=>'Awal Mula',            'title'=>'Gerobak Pertama & Formula Rasa',        'desc'=>'Eksperimen pertama adonan krispi lembut berpadu rempah Nusantara di kawasan mahasiswa Yogyakarta.'],
-                            ['yr'=>'21', 'color'=>'secondary', 'year'=>'Tahun 2021 • Digital Viral',   'badge'=>'Ekspansi 10 Outlet',   'title'=>'Viral di GoFood & ShopeeFood',           'desc'=>'Merambah platform online dengan rating 4.9. Ekspansi ke 10 cabang di Solo & Semarang.'],
-                            ['yr'=>'22', 'color'=>'tertiary',  'year'=>'Tahun 2022 • Central Kitchen', 'badge'=>'Sertifikasi Halal',    'title'=>'Standarisasi Dapur Sentral & Halal',     'desc'=>'Mendirikan central kitchen bersertifikat halal untuk menjamin rasa & higienitas seluruh cabang.'],
-                            ['yr'=>'23', 'color'=>'primary-container','year'=>'Tahun 2023 • Skala Nasional','badge'=>'35 Outlet',       'title'=>'Peluncuran Kemitraan Booth Terpadu',    'desc'=>'Membuka kemitraan franchise modern. Penetrasi Jabodetabek, Surabaya, dan Malang.'],
-                            ['yr'=>'••', 'color'=>'surface-tint','year'=>'2024 — Sekarang • Lintas Pulau','badge'=>'50+ Gerai',       'title'=>'50+ Outlet & Produksi 500k Butir/Bulan','desc'=>'Menjangkau Jawa, Bali, Sumatra. Dipercaya 500k+ penikmat takoyaki tiap bulan.'],
+                            [
+                                'yr'=>'24',
+                                'color'=>'primary',
+                                'badge'=>'Langkah Awal',
+                                'title'=>'2024 — Memulai Perjalanan',
+                                'desc'=>'Takoyaki Nusantara didirikan dari sebuah usaha kuliner yang dirintis oleh mahasiswa dengan semangat untuk membangun bisnis secara mandiri.'
+                            ],
+                            [
+                                'yr'=>'02',
+                                'color'=>'secondary',
+                                'badge'=>'Fokus Kualitas',
+                                'title'=>'Pengembangan Produk & Sistem',
+                                'desc'=>'Bisnis terus dikembangkan melalui peningkatan kualitas produk, operasional, serta penyesuaian dengan kebutuhan dan keinginan pasar.'
+                            ],
+                            [
+                                'yr'=>'03',
+                                'color'=>'tertiary',
+                                'badge'=>'Jangkauan Luas',
+                                'title'=>'Ekspansi Outlet',
+                                'desc'=>'Takoyaki Nusantara mulai memperluas jangkauan dengan membuka beberapa titik penjualan di berbagai lokasi.'
+                            ],
+                            [
+                                'yr'=>'07',
+                                'color'=>'primary-container',
+                                'badge'=>'Kemitraan Terbuka',
+                                'title'=>'Saat Ini — 7 Cabang Aktif',
+                                'desc'=>'Takoyaki Nusantara kini memiliki 7 cabang aktif dan terus membuka peluang untuk berkembang melalui sistem kemitraan.'
+                            ],
                         ];
 
                         // Kelas warna ditulis literal agar ter-generate Tailwind (tidak boleh dinamis).
@@ -79,11 +104,10 @@
                                 </div>
                                 <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm w-full">
                                     <div class="flex flex-wrap items-center justify-between gap-2">
-                                        <span class="text-[11px] text-primary font-bold">{{ $t['year'] }}</span>
+                                        <h4 class="text-[15px] font-bold text-on-surface">{{ $t['title'] }}</h4>
                                         <span class="text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-semibold">{{ $t['badge'] }}</span>
                                     </div>
-                                    <h4 class="text-[15px] font-bold text-on-surface mt-1">{{ $t['title'] }}</h4>
-                                    <p class="text-[12px] text-on-surface-variant mt-1 leading-relaxed">{{ $t['desc'] }}</p>
+                                    <p class="text-[13px] text-on-surface-variant mt-1.5 leading-relaxed">{{ $t['desc'] }}</p>
                                 </div>
                             </div>
                         @endforeach

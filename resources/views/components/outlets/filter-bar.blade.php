@@ -17,7 +17,7 @@
             <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 shrink-0 no-scrollbar" id="city-filter-group">
                 @php
                     $cities = [
-                        ['key'=>'all',       'label'=>'Semua Kota (50+)'],
+                        ['key'=>'all',       'label'=>'Semua Kota (7)'],
                         ['key'=>'jakarta',   'label'=>'Jakarta (18)'],
                         ['key'=>'bandung',   'label'=>'Bandung (10)'],
                         ['key'=>'yogyakarta','label'=>'Yogyakarta (8)'],
