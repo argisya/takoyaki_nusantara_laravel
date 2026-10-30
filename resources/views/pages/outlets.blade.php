@@ -8,9 +8,14 @@
 @section('content')
 
 @include('components.outlets.hero')
-@include('components.outlets.filter-bar')
 @include('components.outlets.map')
-@include('components.outlets.cards')
+
+{{-- Pembungkus khusus agar sticky filter-bar hanya berlaku di batas area daftar outlet (cards) --}}
+<div class="relative">
+    @include('components.outlets.filter-bar')
+    @include('components.outlets.cards')
+</div>
+
 @include('components.outlets.party')
 @include('components.outlets.faq')
 
@@ -18,6 +23,25 @@
 
 @push('scripts')
 <script>
+  document.querySelectorAll('#outlets-faq .faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const icon = trigger.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+
+      document.querySelectorAll('#outlets-faq .faq-content').forEach(panel => panel.classList.add('hidden'));
+      document.querySelectorAll('#outlets-faq .faq-trigger .material-symbols-outlined').forEach(indicator => {
+        indicator.style.transform = 'rotate(0deg)';
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
   (function initOutletFiltering() {
     const searchInput = document.getElementById('outlet-search-input');
     const clearBtn = document.getElementById('clear-search-btn');
@@ -34,7 +58,7 @@
 
     function filterOutlets() {
       const query = searchInput.value.toLowerCase().trim();
-      const isOpenOnly = openToggle.checked;
+      const isOpenOnly = openToggle ? openToggle.checked : false;
       let visibleCount = 0;
 
       outletCards.forEach(card => {
@@ -59,12 +83,16 @@
       if (clearBtn) clearBtn.classList.toggle('hidden', query === '');
 
       if (visibleCount === 0) {
-        noResults.classList.remove('hidden');
-        noResults.classList.add('flex');
+        if (noResults) {
+          noResults.classList.remove('hidden');
+          noResults.classList.add('flex');
+        }
         if (badgeCount) badgeCount.textContent = 'Tidak ada hasil';
       } else {
-        noResults.classList.add('hidden');
-        noResults.classList.remove('flex');
+        if (noResults) {
+          noResults.classList.add('hidden');
+          noResults.classList.remove('flex');
+        }
         if (badgeCount) badgeCount.textContent = `Menampilkan ${visibleCount} Outlet`;
       }
     }
@@ -72,10 +100,10 @@
     cityButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         cityButtons.forEach(b => {
-          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
           b.classList.add('bg-surface-container', 'text-on-surface-variant');
         });
-        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
         btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
         currentCity = btn.getAttribute('data-city');
         filterOutlets();
@@ -91,10 +119,10 @@
       currentCity = 'all';
       cityButtons.forEach((b, idx) => {
         if (idx === 0) {
-          b.classList.add('bg-primary', 'text-on-primary');
+          b.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
           b.classList.remove('bg-surface-container', 'text-on-surface-variant');
         } else {
-          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
           b.classList.add('bg-surface-container', 'text-on-surface-variant');
         }
       });
