@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 {{-- Favicon --}}
-<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+<link rel="icon" type="image/png" href="{{ asset('images/logo-takonusantara.webp') }}">
 
 {{-- Fonts --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">

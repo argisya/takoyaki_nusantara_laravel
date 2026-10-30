@@ -4,7 +4,7 @@
 
             <div class="lg:col-span-6 order-2 lg:order-1">
                 <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3]">
-                    <img src="{{ asset('images/menu-tako.webp') }}"
+                    <img src="{{ asset('images/logo-takonusantara.webp') }}"
                          alt="Chef memasak takoyaki" class="w-full h-full object-cover" loading="lazy">
                     <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-2xl flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>

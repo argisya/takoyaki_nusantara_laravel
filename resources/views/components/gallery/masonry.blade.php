@@ -8,7 +8,7 @@
             </div>
             <div class="flex items-center gap-2 text-on-surface-variant text-[12px] bg-white/80 px-4 py-1.5 rounded-full border border-outline-variant/30 shadow-sm">
                 <span class="w-2 h-2 rounded-full bg-tertiary"></span>
-                <span>Menampilkan <strong>12</strong> Dokumentasi Pilihan</span>
+                <span>Menampilkan <strong id="gallery-visible-count" aria-live="polite">0</strong> Dokumentasi Pilihan</span>
             </div>
         </div>
 

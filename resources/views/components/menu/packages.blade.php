@@ -16,7 +16,7 @@
     @php
         $packages = [
             [
-                'id'=>'size_s', 'img'=>asset('images/produk-1.webp'),
+                'id'=>'size_s', 'img'=>asset('images/produk-4.webp'),
                 'badge'=>'Porsi Praktis', 'badgeStyle'=>'bg-white/90 text-on-surface-variant',
                 'pill'=>'Size S', 'name'=>'Takoyaki Size S',
                 'desc'=>'Porsi personal praktis yang pas untuk ngemil santai atau pengganjal lapar.',
@@ -25,7 +25,7 @@
                 'cta'=>'Pilih Ukuran Ini', 'highlight'=>false,
             ],
             [
-                'id'=>'size_m', 'img'=>asset('images/produk-2.webp'),
+                'id'=>'size_m', 'img'=>asset('images/produk-5.webp'),
                 'badge'=>'Best Seller', 'badgeStyle'=>'bg-primary text-on-primary',
                 'pill'=>'Size M', 'name'=>'Takoyaki Size M',
                 'desc'=>'Ukuran sedang paling diminati! Porsi pas mengenyangkan dengan tekstur creamy khas.',
@@ -34,7 +34,7 @@
                 'cta'=>'Pilih Ukuran Ini', 'highlight'=>true, 'ribbon'=>'TERPOPULER • BEST VALUE',
             ],
             [
-                'id'=>'size_l', 'img'=>asset('images/produk-3.webp'),
+                'id'=>'size_l', 'img'=>asset('images/produk-1.webp'),
                 'badge'=>'Porsi Puas', 'badgeStyle'=>'bg-tertiary text-on-tertiary',
                 'pill'=>'Size L', 'name'=>'Takoyaki Size L',
                 'desc'=>'Ukuran besar yang pas untuk dinikmati bersama teman atau keluarga dengan saus berlimpah.',
@@ -43,7 +43,7 @@
                 'cta'=>'Pilih Ukuran Ini', 'highlight'=>false,
             ],
             [
-                'id'=>'okonomiyaki', 'img'=>asset('images/menu-tako.webp'),
+                'id'=>'okonomiyaki', 'img'=>asset('images/produk-2.webp'),
                 'badge'=>'Menu Spesial', 'badgeStyle'=>'bg-primary-container text-on-primary-container',
                 'pill'=>'Japanese Pancake', 'name'=>'Okonomiyaki',
                 'desc'=>'Pancake gurih khas Jepang dengan paduan sayuran segar, adonan telur lembut, dan saus otentik.',

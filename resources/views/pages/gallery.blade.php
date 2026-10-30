@@ -10,9 +10,14 @@
 @include('components.gallery.hero')
 @include('components.gallery.carousel')
 @include('components.gallery.video-showcase')
-@include('components.gallery.filter-bar')
 @include('components.gallery.bento')
-@include('components.gallery.masonry')
+
+{{-- Pembungkus khusus agar sticky filter hanya berlaku di dalam batas area galeri/masonry --}}
+<div class="relative">
+    @include('components.gallery.filter-bar')
+    @include('components.gallery.masonry')
+</div>
+
 @include('components.gallery.cta')
 @include('components.gallery.video-modal')
 
@@ -116,19 +121,39 @@
     /* ================= FILTER CHIPS ================= */
     const filterButtons = document.querySelectorAll('#filter-container button');
     const cards = document.querySelectorAll('.gallery-card');
+    const searchInput = document.getElementById('gallery-search-input');
+    const visibleCount = document.getElementById('gallery-visible-count');
+    let activeFilter = 'all';
+
+    function updateGallery() {
+      const searchTerm = searchInput ? searchInput.value.trim().toLocaleLowerCase() : '';
+      let visibleCards = 0;
+
+      cards.forEach(card => {
+        const matchesFilter = activeFilter === 'all' || card.getAttribute('data-cat') === activeFilter;
+        const matchesSearch = card.textContent.toLocaleLowerCase().includes(searchTerm);
+        const isVisible = matchesFilter && matchesSearch;
+
+        card.style.display = isVisible ? 'flex' : 'none';
+        if (isVisible) visibleCards += 1;
+      });
+
+      if (visibleCount) visibleCount.textContent = visibleCards;
+    }
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
+        activeFilter = btn.getAttribute('data-filter') || 'all';
         filterButtons.forEach(b => {
           b.className = 'px-5 py-2 rounded-full font-semibold text-[12px] bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all whitespace-nowrap flex items-center gap-1.5';
         });
         btn.className = 'px-5 py-2 rounded-full font-semibold text-[12px] bg-primary text-on-primary whitespace-nowrap shadow-sm transition-all flex items-center gap-1.5';
-        cards.forEach(card => {
-          card.style.display = (filter === 'all' || card.getAttribute('data-cat') === filter) ? 'flex' : 'none';
-        });
+        updateGallery();
       });
     });
+
+    if (searchInput) searchInput.addEventListener('input', updateGallery);
+    updateGallery();
   });
 </script>
 @endpush

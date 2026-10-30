@@ -8,10 +8,10 @@
 
         @php
             $menus = [
-                ['img'=>asset('images/produk-1.webp'), 'badge'=>'Size S','name'=>'Takoyaki Size S','desc'=>'Porsi personal renyah dan nikmat dengan taburan katsuobushi serta saus gurih khas.','price'=>'15.000','rating'=>'4.9'],
-                ['img'=>asset('images/produk-2.webp'), 'badge'=>'Best Seller','name'=>'Takoyaki Size M','desc'=>'Porsi favorit paling pas! Lembut creamy di dalam, crispy keemasan di luar.','price'=>'20.000','rating'=>'4.9'],
-                ['img'=>asset('images/produk-3.webp'), 'badge'=>'Size L','name'=>'Takoyaki Size L','desc'=>'Porsi puas cocok untuk dinikmati bersama teman atau keluarga dengan saus melimpah.','price'=>'30.000','rating'=>'4.9'],
-                ['img'=>asset('images/menu-tako.webp'), 'badge'=>'Spesial','name'=>'Okonomiyaki','desc'=>'Pancake gurih ala Jepang dengan isian sayuran segar, racikan bumbu spesial, mayones & katsuobushi.','price'=>'25.000','rating'=>'4.8'],
+                ['img'=>asset('images/produk-4.webp'), 'badge'=>'Size S','name'=>'Takoyaki Size S','desc'=>'Porsi personal renyah dan nikmat dengan taburan katsuobushi serta saus gurih khas.','price'=>'15.000','rating'=>'4.9'],
+                ['img'=>asset('images/produk-5.webp'), 'badge'=>'Best Seller','name'=>'Takoyaki Size M','desc'=>'Porsi favorit paling pas! Lembut creamy di dalam, crispy keemasan di luar.','price'=>'20.000','rating'=>'4.9'],
+                ['img'=>asset('images/produk-1.webp'), 'badge'=>'Size L','name'=>'Takoyaki Size L','desc'=>'Porsi puas cocok untuk dinikmati bersama teman atau keluarga dengan saus melimpah.','price'=>'30.000','rating'=>'4.9'],
+                ['img'=>asset('images/produk-2.webp'), 'badge'=>'Spesial','name'=>'Okonomiyaki','desc'=>'Pancake gurih ala Jepang dengan isian sayuran segar, racikan bumbu spesial, mayones & katsuobushi.','price'=>'25.000','rating'=>'4.8'],
             ];
         @endphp
 

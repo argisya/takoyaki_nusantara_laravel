@@ -22,7 +22,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="package-selector-group">
                         <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="size_s" onclick="setPackage('size_s', 15000, 'Takoyaki Size S')">
                             <span class="text-[13px] block font-bold">Size S</span>
-                            <span class="text-[11px] text-on-surface-variant block">Rp 15.000</span>
+                            <span class="text-[11px] block">Rp 15.000</span>
                         </button>
                         <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-primary-container text-on-primary-container shadow-md" data-pkg="size_m" onclick="setPackage('size_m', 20000, 'Takoyaki Size M')">
                             <span class="text-[13px] block font-bold">Size M</span>
@@ -30,11 +30,11 @@
                         </button>
                         <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="size_l" onclick="setPackage('size_l', 30000, 'Takoyaki Size L')">
                             <span class="text-[13px] block font-bold">Size L</span>
-                            <span class="text-[11px] text-on-surface-variant block">Rp 30.000</span>
+                            <span class="text-[11px] block">Rp 30.000</span>
                         </button>
                         <button type="button" class="pkg-btn p-3 rounded-xl text-left transition-all bg-surface-container-low text-on-surface" data-pkg="okonomiyaki" onclick="setPackage('okonomiyaki', 25000, 'Okonomiyaki')">
                             <span class="text-[13px] block font-bold">Okonomiyaki</span>
-                            <span class="text-[11px] text-on-surface-variant block">Rp 25.000</span>
+                            <span class="text-[11px] block">Rp 25.000</span>
                         </button>
                     </div>
                 </div>

@@ -1,7 +1,8 @@
-<section class="w-full bg-surface-container-lowest/95 backdrop-blur-md sticky top-16 md:top-20 z-30 shadow-sm border-y border-outline-variant/30">
-    <div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+{{-- resources/views/components/gallery/filter-bar.blade.php --}}
+<section class="sticky top-[6.25rem] z-30 w-full border-y border-outline-variant/30 bg-surface-container-lowest/95 shadow-sm backdrop-blur-md md:top-[7.25rem]">
+    <div class="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-4 px-margin py-3.5 md:flex-row md:px-margin-tablet lg:px-margin-desktop">
 
-        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 no-scrollbar" id="filter-container">
+        <div class="no-scrollbar flex w-full items-center gap-2 overflow-x-auto pb-1 md:w-auto md:pb-0" id="filter-container">
             @php
                 $filters = [
                     ['key'=>'all',       'label'=>'Semua Dokumentasi', 'icon'=>'grid_view'],
@@ -15,7 +16,7 @@
 
             @foreach($filters as $i => $f)
                 <button type="button" data-filter="{{ $f['key'] }}"
-                        class="px-5 py-2 rounded-full font-semibold text-[12px] whitespace-nowrap transition-all flex items-center gap-1.5
+                        class="flex items-center gap-1.5 whitespace-nowrap rounded-full px-5 py-2 font-semibold text-[12px] transition-all
                                {{ $i === 0
                                   ? 'bg-primary text-on-primary shadow-sm'
                                   : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high' }}">
@@ -27,10 +28,10 @@
             @endforeach
         </div>
 
-        <div class="relative w-full md:w-64 shrink-0">
+        <div class="relative w-full shrink-0 md:w-64">
             <span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant/60 text-[18px]">search</span>
             <input id="gallery-search-input"
-                   class="w-full bg-surface-container pl-9 pr-3 py-2 rounded-xl text-[13px] text-on-surface outline-none focus:ring-2 focus:ring-primary/20 transition-all border border-transparent focus:border-primary/30"
+                   class="w-full rounded-xl border border-transparent bg-surface-container py-2 pl-9 pr-3 text-[13px] text-on-surface outline-none transition-all focus:border-primary/30 focus:ring-2 focus:ring-primary/20"
                    placeholder="Cari kegiatan/kota..." type="text">
         </div>
     </div>
