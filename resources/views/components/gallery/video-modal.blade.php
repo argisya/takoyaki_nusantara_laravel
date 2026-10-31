@@ -9,16 +9,19 @@
                 <span class="material-symbols-outlined text-[20px]">close</span>
             </button>
         </div>
-        <div class="relative aspect-video w-full bg-zinc-950 flex items-center justify-center">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeI4Tee6dFPuK_LsZDM599a301XawBeC7-5L1qua5D9i5FRBAf8F5WGSeZ-66kcS_4EyFSzugvqxbJdeeNTbpctoDUeB1ZR6zC3cWwUeekxCAywaBQTetxKTXsq78xQmw-VKMjTxDG5biEYgtzT9LcztJSn9dMRHdM2kebVxzCJdn5nJdPPaplTMKkWnfmcdVQO4BkQn_arV9tAEbiX_43gR6dN3wDhujte-u-n8OE"
-                 class="w-full h-full object-cover opacity-75" alt="Video playing">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6 bg-black/40">
-                <div class="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center text-white shadow-2xl mb-4 animate-pulse">
-                    <span class="material-symbols-outlined text-[40px]">play_arrow</span>
-                </div>
-                <p class="text-[18px] font-bold">Memutar Cuplikan Video Resolusi Penuh</p>
-                <p class="text-[13px] text-white/80 mt-1 max-w-md">Dokumentasi dapur sentral halal & festival nusantara 2025.</p>
-            </div>
+        <div class="relative aspect-video w-full bg-zinc-950">
+            <video id="gallery-video-player"
+                   class="absolute inset-0 w-full h-full object-contain"
+                   controls
+                   playsinline
+                   preload="none"
+                   poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAeI4Tee6dFPuK_LsZDM599a301XawBeC7-5L1qua5D9i5FRBAf8F5WGSeZ-66kcS_4EyFSzugvqxbJdeeNTbpctoDUeB1ZR6zC3cWwUeekxCAywaBQTetxKTXsq78xQmw-VKMjTxDG5biEYgtzT9LcztJSn9dMRHdM2kebVxzCJdn5nJdPPaplTMKkWnfmcdVQO4BkQn_arV9tAEbiX_43gR6dN3wDhujte-u-n8OE">
+                <source src="{{ asset('videos/VID-20261001-WA0019.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung pemutaran video.
+            </video>
+            <p id="gallery-video-error" class="hidden absolute inset-x-4 bottom-4 rounded-lg bg-black/80 p-3 text-center text-sm text-white" role="alert">
+                Video gagal diputar. Silakan coba lagi.
+            </p>
         </div>
     </div>
 </div>

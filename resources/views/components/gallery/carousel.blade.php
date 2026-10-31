@@ -53,7 +53,7 @@
                     'desc'=>'Tim ahli memverifikasi higienitas tiap takaran adonan premix sebelum dikirim ke 75+ outlet mitra.'
                 ],
                 [
-                    'img'=>'https://lh3.googleusercontent.com/aida/AEtjO1UDp4qZYYK1zLJ6VV1lcMn6N8ETwh9JLwJPYsklt1dNwNsDESNrSXDzHMEtcS38ycHe5uufc7QMLNuCIKh0hHnxllqUFv2HB1vYgYW44Hk1BJBWjrhT_dU7FeS-vjkYbmeOqd1EcnD7U7RyH5n6LQ-fdeX-L5d25tKKkajp0kMnFVQs356Gnradnk6pPoqWb2iA_t-b1lI-j4MWD80OuNczy9eB7umvpu9GzBmjj9BZQQ',
+                    'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuAeI4Tee6dFPuK_LsZDM599a301XawBeC7-5L1qua5D9i5FRBAf8F5WGSeZ-66kcS_4EyFSzugvqxbJdeeNTbpctoDUeB1ZR6zC3cWwUeekxCAywaBQTetxKTXsq78xQmw-VKMjTxDG5biEYgtzT9LcztJSn9dMRHdM2kebVxzCJdn5nJdPPaplTMKkWnfmcdVQO4BkQn_arV9tAEbiX_43gR6dN3wDhujte-u-n8OE',
                     'badge'=>'Pelayanan Hangat', 'badgeColor'=>'bg-primary text-on-primary',
                     'meta'=>'Open Kitchen Experience',
                     'captionNumber'=>'#04',

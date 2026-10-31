@@ -98,23 +98,49 @@
     const videoTrigger = document.getElementById('main-video-trigger');
     const videoModal = document.getElementById('video-modal');
     const closeVideoBtn = document.getElementById('close-video-modal');
+    const videoPlayer = document.getElementById('gallery-video-player');
+    const videoError = document.getElementById('gallery-video-error');
+
+    function closeVideoModal() {
+      videoModal.classList.add('hidden');
+      videoModal.classList.remove('flex');
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+      }
+    }
 
     if (videoTrigger && videoModal) {
       videoTrigger.addEventListener('click', () => {
         videoModal.classList.remove('hidden');
         videoModal.classList.add('flex');
+        if (videoPlayer) {
+          if (videoError) videoError.classList.add('hidden');
+          videoPlayer.play().catch(() => {
+            if (videoError) videoError.classList.remove('hidden');
+          });
+        }
       });
     }
     if (closeVideoBtn && videoModal) {
-      closeVideoBtn.addEventListener('click', () => {
-        videoModal.classList.add('hidden');
-        videoModal.classList.remove('flex');
-      });
+      closeVideoBtn.addEventListener('click', closeVideoModal);
       videoModal.addEventListener('click', e => {
         if (e.target === videoModal) {
-          videoModal.classList.add('hidden');
-          videoModal.classList.remove('flex');
+          closeVideoModal();
         }
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+          closeVideoModal();
+        }
+      });
+    }
+    if (videoPlayer) {
+      videoPlayer.addEventListener('error', () => {
+        if (videoError) videoError.classList.remove('hidden');
+      });
+      videoPlayer.addEventListener('playing', () => {
+        if (videoError) videoError.classList.add('hidden');
       });
     }
 
