@@ -10,16 +10,23 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             @php
                 $outlets = [
-                    ['city'=>'Jakarta Selatan','name'=>'Outlet Tebet Raya','addr'=>'Jl. Tebet Raya No. 42B','hours'=>'10:00 - 22:00'],
-                    ['city'=>'Bandung',        'name'=>'Outlet Dipati Ukur','addr'=>'Jl. Dipati Ukur No. 88','hours'=>'10:00 - 22:00'],
-                    ['city'=>'Yogyakarta',     'name'=>'Outlet Malioboro',  'addr'=>'Jl. Malioboro No. 115','hours'=>'10:00 - 23:00'],
-                    ['city'=>'Surabaya',       'name'=>'Outlet Manyar',     'addr'=>'Jl. Manyar Kertoarjo 54','hours'=>'10:00 - 22:00'],
+                    ['city'=>'Bogor', 'name'=>'Outlet Karadenan', 'addr'=>'Jl. Karadenan, Cibinong, Bogor', 'hours'=>'10:00 - 22:00', 'gmap'=>'https://share.google/EjkRdyZV7EiYY9Yam'],
+                    ['city'=>'Bogor', 'name'=>'Outlet Cibinong',  'addr'=>'Kawasan Cibinong, Bogor',         'hours'=>'10:00 - 22:00', 'gmap'=>'https://share.google/GXsDqq3gdomiVwrSg'],
+                    ['city'=>'Bogor', 'name'=>'Outlet VBI',       'addr'=>'Villa Bogor Indah, Bogor',        'hours'=>'10:00 - 22:00', 'gmap'=>'https://share.google/azVmC5WGuvOdTqINB'],
+                    ['city'=>'Bogor', 'name'=>'Outlet UIKA',      'addr'=>'Area Kampus UIKA, Jl. KH. Sholeh Iskandar, Bogor', 'hours'=>'10:00 - 22:00', 'gmap'=>'https://share.google/demaeMWjiKB8vn8YK'],
                 ];
             @endphp
 
             @foreach($outlets as $o)
-                <x-outlet-card :city="$o['city']" :name="$o['name']" :addr="$o['addr']" :hours="$o['hours']" />
+                <x-outlet-card :city="$o['city']" :name="$o['name']" :addr="$o['addr']" :hours="$o['hours']" :gmap="$o['gmap']" />
             @endforeach
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="{{ route('outlets') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-surface-container-lowest hover:bg-surface-container text-primary font-bold rounded-xl border border-outline-variant/40 shadow-sm transition-all text-[13.5px]">
+                <span>Lihat Seluruh 7 Cabang Takoyaki Nusantara</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
         </div>
     </div>
 </section>

@@ -7,40 +7,48 @@
                 <div class="flex items-center justify-between gap-3 mb-3 relative z-10">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary text-[20px]">explore</span>
-                        <h2 class="text-[15px] font-bold text-on-surface">Peta Sebaran Booth Indonesia</h2>
+                        <h2 class="text-[15px] font-bold text-on-surface">Peta Sebaran Outlet</h2>
                     </div>
-                    <span class="text-[10.5px] bg-primary/10 text-primary px-3 py-1 rounded-full font-bold">GPS Live Tracker</span>
-                </div>
-
-                <div class="relative w-full h-[280px] md:h-[320px] rounded-xl overflow-hidden shadow-inner bg-surface-variant bg-cover bg-center"
-                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKIXvNoH6DTI3nxiDtu9y0b2i8ekML7MNNSIci_Wyq4uawsVp8EQByZTG3_tXrt0uJjLp51dE8a1i0TM-IKx5Df0iilUDvKu8whGZ-VCfBvZK3OUHqR1MfrtKHa7GrH8z8qGNh7Vui3Z9i-PYT4SbiVLZqFLQjNyMomBWDV0KLoMLjSBTDrHvyFVjMeDO2vZhxUdplzp-mT8ll_3AGop6GuVVuK0cGNu5NNgYtAvJfponSJLvv8knR')">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4">
-                        <div class="flex flex-wrap items-center gap-2">
-                            @php
-                                $legends = [
-                                    ['color'=>'primary',              'text'=>'Jabodetabek Hub: 18 Titik'],
-                                    ['color'=>'secondary',            'text'=>'Bandung Raya: 10 Titik'],
-                                    ['color'=>'tertiary-container',   'text'=>'Jogja - Jateng: 8 Titik'],
-                                    ['color'=>'secondary-container',  'text'=>'Surabaya - Bali: 13 Titik'],
-                                ];
-                            @endphp
-                            @foreach($legends as $l)
-                                <span class="px-3 py-1 bg-white/95 backdrop-blur-md rounded-lg text-[10.5px] text-on-surface shadow-sm flex items-center gap-1.5 font-medium">
-                                    <span class="w-2 h-2 rounded-full bg-{{ $l['color'] }} inline-block"></span>
-                                    {{ $l['text'] }}
-                                </span>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-3 flex items-center justify-between text-on-surface-variant text-[12px] flex-wrap gap-2">
-                    <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[16px] text-tertiary">offline_pin</span>
-                        Bahan dipasok harian dari Central Kitchen bersertifikasi Halal
+                    <span id="gps-live-badge" class="text-[10.5px] bg-primary/10 text-primary px-3 py-1 rounded-full font-bold flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-primary inline-block animate-pulse"></span>
+                        GPS Live Tracker
                     </span>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener"
-                       class="text-primary font-bold hover:underline text-[11.5px]">Buka Google Maps Full →</a>
+                </div>
+
+                {{-- Interactive Map Container --}}
+                <div class="relative w-full h-[280px] md:h-[360px] rounded-xl overflow-hidden shadow-inner bg-surface-variant" id="outlet-map-container">
+                    {{-- Map is rendered here via JS --}}
+                    <div id="outlet-map" class="w-full h-full"></div>
+
+                    {{-- Fallback if JS disabled --}}
+                    <noscript>
+                        <div class="w-full h-full flex items-center justify-center bg-surface-variant">
+                            <p class="text-on-surface-variant text-sm">Aktifkan JavaScript untuk menampilkan peta interaktif.</p>
+                        </div>
+                    </noscript>
+                </div>
+
+                {{-- Legend --}}
+                <div class="mt-3 flex items-center justify-between text-on-surface-variant text-[12px] flex-wrap gap-2">
+                    <div class="flex flex-wrap items-center gap-2">
+                        @php
+                            $legends = [
+                                ['color'=>'primary',             'text'=>'Bogor: 5 Cabang'],
+                                ['color'=>'secondary',           'text'=>'Tangsel: 1 Cabang'],
+                                ['color'=>'tertiary-container',  'text'=>'Depok: 1 (Proses)'],
+                            ];
+                        @endphp
+                        @foreach($legends as $l)
+                            <span class="px-2.5 py-1 bg-surface-container rounded-lg text-[10.5px] text-on-surface-variant flex items-center gap-1.5 font-medium">
+                                <span class="w-2 h-2 rounded-full bg-{{ $l['color'] }} inline-block"></span>
+                                {{ $l['text'] }}
+                            </span>
+                        @endforeach
+                    </div>
+                    <button id="btn-recenter-map" class="text-primary font-bold hover:underline text-[11.5px] flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">my_location</span>
+                        Re-center
+                    </button>
                 </div>
             </div>
 

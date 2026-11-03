@@ -1,8 +1,8 @@
 {{-- resources/views/pages/partnership.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Kemitraan & Franchise - Takoyaki Nusantara | ROI 2-4 Bulan')
-@section('meta_description', 'Jadi mitra Takoyaki Nusantara: tanpa royalty fee, BEP 2-4 bulan, paket mulai Rp 14,5 juta. Sistem teruji dengan 50+ mitra aktif di 12 kota.')
+@section('title', 'Kemitraan - Takoyaki Nusantara | Mulai Bisnis Modal Terjangkau')
+@section('meta_description', 'Mulai bisnis bersama Takoyaki Nusantara: investasi mulai Rp 10.000.000, sistem tanpa bagi hasil, lengkap dengan gerobak, alat operasional, bahan awal, dan support pemasaran.')
 @section('meta_keywords', 'franchise takoyaki, kemitraan takoyaki, peluang usaha kuliner, franchise murah, usaha takoyaki')
 
 @section('content')
@@ -66,8 +66,8 @@
       calcNet.textContent = fmt(Math.max(net, 0));
 
       if (net > 0) {
-        const bep = (22500000 / net).toFixed(1);
-        calcBep.textContent = 'Estimasi Balik Modal Paket Semi-Container: ~' + bep + ' Bulan';
+        const bep = (10000000 / net).toFixed(1);
+        calcBep.textContent = 'Estimasi Balik Modal Paket Kemitraan (Rp 10 Jt): ~' + bep + ' Bulan';
       } else {
         calcBep.textContent = 'Perlu peningkatan target porsi di atas beban operasional.';
       }

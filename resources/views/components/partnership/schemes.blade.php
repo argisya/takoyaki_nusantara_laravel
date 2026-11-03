@@ -2,28 +2,36 @@
     <div class="w-full max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
 
         <x-section-header
-            label="Fleksibilitas Bisnis"
-            title="Dua Skema Kerja Sama Kemitraan"
-            subtitle="Pilih apakah Anda ingin menjalankan sendiri atau mempercayakan operasional harian secara otomatis." />
+            label="Transparansi Finansial"
+            title="Sistem Kemitraan Tanpa Bagi Hasil"
+            subtitle="Seluruh laba dan perputaran omset harian menjadi hak mutlak mitra 100% tanpa potongan royalti." />
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             @php
                 $schemes = [
                     [
-                        'badge'=>'Paling Populer', 'badgeStyle'=>'bg-primary/10 text-primary',
-                        'icon'=>'person', 'iconColor'=>'text-primary',
-                        'title'=>'1. Skema Kemitraan Mandiri (Owner-Operator)',
-                        'desc'=>'Mitra mengelola sendiri operasional harian, merekrut karyawan, dan menentukan strategi shift. Seluruh omset dan keuntungan bersih 100% masuk ke rekening mitra.',
-                        'items'=>['100% laba bersih menjadi milik Anda tanpa potongan','Bebas menentukan jam operasional toko','Pusat tetap memasok bahan baku halal & dukungan promosi'],
-                        'footerLabel'=>'Bagi Hasil Pusat:', 'footerValue'=>'0% (Rp 0 Royalty Fee)', 'footerColor'=>'text-primary',
+                        'badge'=>'Hak Penuh Mitra', 'badgeStyle'=>'bg-primary/10 text-primary',
+                        'icon'=>'payments', 'iconColor'=>'text-primary',
+                        'title'=>'100% Keuntungan Milik Anda',
+                        'desc'=>'Takoyaki Nusantara tidak membebankan potongan omset atau bagi hasil bulanan. Seluruh hasil penjualan langsung masuk ke kas mitra sepenuhnya.',
+                        'items'=>[
+                            'Bebas biaya royalti bulanan (Rp 0 Royalty Fee)',
+                            'Tidak ada bagi hasil persentase dari omset harian',
+                            'Perputaran kas usaha sepenuhnya dikelola oleh mitra',
+                        ],
+                        'footerLabel'=>'Potongan Omset Bulanan:', 'footerValue'=>'0% (Rp 0)', 'footerColor'=>'text-primary',
                     ],
                     [
-                        'badge'=>'Investasi Pasif', 'badgeStyle'=>'bg-secondary/10 text-secondary',
-                        'icon'=>'hub', 'iconColor'=>'text-secondary',
-                        'title'=>'2. Skema Kemitraan Autopilot (Bagi Hasil)',
-                        'desc'=>'Cocok untuk profesional, investor, atau Anda yang sibuk. Tim manajemen pusat yang mengelola rekrutmen staf, operasional booth, dan pelaporan keuangan real-time.',
-                        'items'=>['Operasional dikelola tim profesional pusat','Laporan keuangan transparan harian via aplikasi kasir','Sangat cocok bagi pemodal yang ingin passive income'],
-                        'footerLabel'=>'Skema Bagi Hasil:', 'footerValue'=>'70% Mitra : 30% Manajemen', 'footerColor'=>'text-secondary',
+                        'badge'=>'Pendampingan Usaha', 'badgeStyle'=>'bg-secondary/10 text-secondary',
+                        'icon'=>'handshake', 'iconColor'=>'text-secondary',
+                        'title'=>'Dukungan Berkelanjutan Tanpa Biaya Tersembunyi',
+                        'desc'=>'Meskipun tanpa bagi hasil, mitra tetap memperoleh dukungan menyeluruh dari tim manajemen pusat untuk menjaga keberlangsungan usaha.',
+                        'items'=>[
+                            'Dukungan pasokan bahan baku halal berkualitas',
+                            'Pelatihan staff dan konsultasi operasional berkala',
+                            'Dukungan promosi, materi branding, dan marketplace',
+                        ],
+                        'footerLabel'=>'Dukungan Tim Pusat:', 'footerValue'=>'Berkesinambungan', 'footerColor'=>'text-secondary',
                     ],
                 ];
             @endphp

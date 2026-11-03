@@ -14,10 +14,11 @@
         @php
             $outlets = [
                 [
-                    'city'=>'jakarta', 'cityLabel'=>'Jakarta Selatan', 'name'=>'Outlet Tebet Raya',
-                    'badge'=>'Flagship Store', 'badgeColor'=>'bg-primary text-on-primary',
+                    'city'=>'bogor', 'cityLabel'=>'Bogor - Karadenan', 'name'=>'Outlet Karadenan',
+                    'badge'=>'Cabang Utama', 'badgeColor'=>'bg-primary text-on-primary',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'4.9', 'reviewCount'=>'420+',
-                    'address'=>'Jl. Tebet Raya No. 42B, Tebet Barat, Jakarta Selatan 12810 (seberang SPBU Tebet)',
+                    'address'=>'Jl. Raya Karadenan, Cibinong, Kab. Bogor, Jawa Barat',
                     'hours'=>'Setiap Hari | 10:00 - 22:00 WIB',
                     'facilities'=>['Dine-in Mini Bar','Takeaway Cepat','Parkir Motor','Ojol Pickup Point'],
                     'wa'=>config('site.whatsapp'), 'waLabel'=>config('site.whatsapp'),
@@ -25,10 +26,11 @@
                     'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuB7jdrY-aKb2eQjAWxSuXPJHRt05sCaCZXwiHW_9R7mrwAuwUH_zPp8uq4Vr3HmsWZ9JYPaYEXWIMtY5AYo4PudBUChegfQbAPlCMEuKN2x-_ud3RY0S0Rfe-aaGVhRiIHnFmeQ0BSdA4pKkGoW53giPz2o_D1Gz7Q2-5iqpw1YfcbkeK0apedPIqp9zCAcRUe98QHn_w8LdS_LLPwyCIcHUJK2DRW0TWB7IALtTBMGGX8m4uLhWP86',
                 ],
                 [
-                    'city'=>'bandung', 'cityLabel'=>'Bandung Kota', 'name'=>'Outlet Dipati Ukur',
-                    'badge'=>'Sentra Mahasiswa', 'badgeColor'=>'bg-secondary-container text-on-secondary-container',
+                    'city'=>'bogor', 'cityLabel'=>'Bogor - Cibinong', 'name'=>'Outlet Cibinong',
+                    'badge'=>'Favorit', 'badgeColor'=>'bg-secondary-container text-on-secondary-container',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'4.8', 'reviewCount'=>'380+',
-                    'address'=>'Jl. Dipati Ukur No. 88, Lebakgede, Coblong, Kota Bandung 40132 (seberang Kampus Unpad)',
+                    'address'=>'Kawasan Cibinong, Kab. Bogor, Jawa Barat',
                     'hours'=>'Setiap Hari | 10:00 - 22:00 WIB',
                     'facilities'=>['Takeaway Cepat','Parkir Luas','QRIS Siap'],
                     'wa'=>config('site.whatsapp'), 'waLabel'=>config('site.whatsapp'),
@@ -47,10 +49,11 @@
                     'img'=>'https://lh3.googleusercontent.com/aida-public/AB6AXuDDYJ0ltw8rKn3RO6YLrdhBRsXHqvUgpRqd_9stzozNzuZwq44bF7jeKwb3OhNDQDi6a8pPIKtPoEOvKIwpeehCVeglkUekgP5PPkA1z-6q17oay0Ux8Gb6NXVCgT8ZwmVqaOPlh0sHgUUPFIv6qoW6hzPKcJi1h8Z_XqyBypdUI7RrAIsCsdWoECFnGvqD0CUyI_4ZilrQisQod3YPH3NepXBqVwo5FbYg_wfBlgrkXW_Sor_JEDAT',
                 ],
                 [
-                    'city'=>'surabaya', 'cityLabel'=>'Surabaya Kota', 'name'=>'Outlet Manyar Kertoarjo',
-                    'badge'=>'Surabaya Timur', 'badgeColor'=>'bg-primary text-on-primary',
-                    'rating'=>'4.9', 'reviewCount'=>'290+',
-                    'address'=>'Jl. Manyar Kertoarjo No. 54, Manyar Sabrangan, Mulyorejo, Surabaya 60116',
+                    'city'=>'bogor', 'cityLabel'=>'Bogor - Kampus UIKA', 'name'=>'Outlet UIKA',
+                    'badge'=>'Sentra Mahasiswa', 'badgeColor'=>'bg-primary text-on-primary',
+                    'isOpen'=>true, 'statusText'=>'Buka',
+                    'rating'=>'4.9', 'reviewCount'=>'450+',
+                    'address'=>'Kawasan Kampus Universitas Ibn Khaldun (UIKA), Jl. KH. Sholeh Iskandar, Kota Bogor',
                     'hours'=>'Setiap Hari | 10:00 - 22:00 WIB',
                     'facilities'=>['Parkir Mobil & Motor','Varian Pedas Komplit','Drive-thru Motor'],
                     'wa'=>config('site.whatsapp'), 'waLabel'=>config('site.whatsapp'),
@@ -95,16 +98,22 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="outlet-card-container">
             @foreach($outlets as $o)
-                <article class="outlet-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all p-4 flex flex-col justify-between" data-city="{{ $o['city'] }}" data-open="true">
+                <article class="outlet-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all p-4 flex flex-col justify-between" data-city="{{ $o['city'] }}" data-open="{{ $o['isOpen'] ? 'true' : 'false' }}">
                     <div>
                         <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 bg-surface-variant">
                             <img src="{{ $o['img'] }}" alt="{{ $o['name'] }}" loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute top-3 left-3 flex flex-wrap gap-1">
                                 <span class="{{ $o['badgeColor'] }} text-[10px] px-2.5 py-1 rounded-md shadow-sm font-bold uppercase tracking-wider">{{ $o['badge'] }}</span>
-                                <span class="bg-tertiary text-on-tertiary text-[10px] px-2.5 py-1 rounded-md shadow-sm font-semibold flex items-center gap-1">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> Buka
-                                </span>
+                                @if($o['isOpen'])
+                                    <span class="bg-tertiary text-on-tertiary text-[10px] px-2.5 py-1 rounded-md shadow-sm font-semibold flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> Buka
+                                    </span>
+                                @else
+                                    <span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2.5 py-1 rounded-md shadow-sm font-semibold flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[13px]">pending</span> {{ $o['statusText'] }}
+                                    </span>
+                                @endif
                             </div>
                             <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-md text-[11px] font-medium text-on-surface">
                                 ⭐ {{ $o['rating'] }} ({{ $o['reviewCount'] }})
@@ -143,11 +152,18 @@
                             Pesan via WhatsApp ({{ $o['waLabel'] }})
                         </a>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="{{ $o['maps'] }}" target="_blank" rel="noopener"
-                               class="inline-flex items-center justify-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface text-[11.5px] py-2 rounded-lg transition-all font-semibold">
-                                <span class="material-symbols-outlined text-[15px] text-primary">directions</span>
-                                Petunjuk Maps
-                            </a>
+                            @if($o['maps'] !== '#')
+                                <a href="{{ $o['maps'] }}" target="_blank" rel="noopener"
+                                   class="inline-flex items-center justify-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface text-[11.5px] py-2 rounded-lg transition-all font-semibold">
+                                    <span class="material-symbols-outlined text-[15px] text-primary">directions</span>
+                                    Petunjuk Maps
+                                </a>
+                            @else
+                                <span class="inline-flex items-center justify-center gap-1 bg-surface-container text-on-surface-variant text-[11.5px] py-2 rounded-lg font-semibold cursor-not-allowed opacity-75">
+                                    <span class="material-symbols-outlined text-[15px]">hourglass_empty</span>
+                                    Belum Diapprove
+                                </span>
+                            @endif
                             <a href="https://gofood.co.id" target="_blank" rel="noopener"
                                class="inline-flex items-center justify-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface text-[11.5px] py-2 rounded-lg transition-all font-semibold">
                                 <span class="material-symbols-outlined text-[15px] text-secondary">moped</span>

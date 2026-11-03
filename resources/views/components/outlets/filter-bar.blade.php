@@ -18,12 +18,10 @@
             <div class="no-scrollbar flex shrink-0 items-center gap-2 overflow-x-auto pb-1 md:pb-0" id="city-filter-group">
                 @php
                     $cities = [
-                        ['key'=>'all',        'label'=>'Semua Kota (7)'],
-                        ['key'=>'jakarta',    'label'=>'Jakarta (3)'],
-                        ['key'=>'bandung',    'label'=>'Bandung (1)'],
-                        ['key'=>'yogyakarta', 'label'=>'Yogyakarta (1)'],
-                        ['key'=>'surabaya',   'label'=>'Surabaya (1)'],
-                        ['key'=>'bali',       'label'=>'Bali (1)'],
+                        ['key'=>'all',       'label'=>'Semua Cabang (7)'],
+                        ['key'=>'bogor',     'label'=>'Bogor (5)'],
+                        ['key'=>'tangsel',   'label'=>'Tangerang Selatan (1)'],
+                        ['key'=>'depok',     'label'=>'Depok (1)'],
                     ];
                 @endphp
                 @foreach($cities as $i => $c)

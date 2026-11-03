@@ -1,7 +1,7 @@
-@props(['city','name','addr','hours'])
+@props(['city','name','addr','hours','gmap' => null])
 
 @php
-    $gmap = 'https://www.google.com/maps/search/'.urlencode($name.' '.$addr);
+    $gmap = $gmap ?: 'https://www.google.com/maps/search/'.urlencode($name.' '.$addr);
     $wa   = 'https://wa.me/'.config('site.whatsapp').'?text='.urlencode("Halo, saya mau pesan dari {$name}");
 @endphp
 
