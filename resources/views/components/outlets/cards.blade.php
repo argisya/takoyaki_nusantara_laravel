@@ -40,6 +40,7 @@
                 [
                     'city'=>'yogyakarta', 'cityLabel'=>'DI Yogyakarta', 'name'=>'Outlet Malioboro Hub',
                     'badge'=>'Cabang Utama', 'badgeColor'=>'bg-secondary text-on-secondary',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'5.0', 'reviewCount'=>'610+',
                     'address'=>'Jl. Malioboro No. 115, Sosromenduran, Gedong Tengen, Kota Yogyakarta 55271',
                     'hours'=>'Setiap Hari | 10:00 - 23:00 WIB',
@@ -63,6 +64,7 @@
                 [
                     'city'=>'jakarta', 'cityLabel'=>'Jakarta Barat', 'name'=>'Outlet Tanjung Duren',
                     'badge'=>'Kuliner Malam', 'badgeColor'=>'bg-primary-container text-on-primary-container',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'4.8', 'reviewCount'=>'340+',
                     'address'=>'Jl. Tanjung Duren Barat I No. 19, Grogol Petamburan, Jakarta Barat 11470 (dekat Pasar Kopro)',
                     'hours'=>'Setiap Hari | 11:00 - 23:00 WIB',
@@ -74,6 +76,7 @@
                 [
                     'city'=>'bali', 'cityLabel'=>'Badung - Bali', 'name'=>'Outlet Dewi Sri Kuta',
                     'badge'=>'Sentra Wisata Bali', 'badgeColor'=>'bg-secondary text-on-secondary',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'4.9', 'reviewCount'=>'510+',
                     'address'=>'Jl. Dewi Sri No. 88A, Legian, Kuta, Kab. Badung, Bali 80361 (depan Food Plaza Dewi Sri)',
                     'hours'=>'Setiap Hari | 11:00 - 23:30 WITA',
@@ -85,6 +88,7 @@
                 [
                     'city'=>'jakarta', 'cityLabel'=>'Jakarta Timur', 'name'=>'Outlet Rawamangun Hub',
                     'badge'=>'Cabang Baru', 'badgeColor'=>'bg-tertiary text-on-tertiary',
+                    'isOpen'=>true, 'statusText'=>'Buka',
                     'rating'=>'4.9', 'reviewCount'=>'195+',
                     'address'=>'Jl. Balai Pustaka Timur No. 28, Rawamangun, Pulo Gadung, Jakarta Timur 13220',
                     'hours'=>'Setiap Hari | 10:00 - 22:00 WIB',
