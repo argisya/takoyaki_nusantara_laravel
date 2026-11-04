@@ -15,7 +15,7 @@
                    controls
                    playsinline
                    preload="none"
-                   poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAeI4Tee6dFPuK_LsZDM599a301XawBeC7-5L1qua5D9i5FRBAf8F5WGSeZ-66kcS_4EyFSzugvqxbJdeeNTbpctoDUeB1ZR6zC3cWwUeekxCAywaBQTetxKTXsq78xQmw-VKMjTxDG5biEYgtzT9LcztJSn9dMRHdM2kebVxzCJdn5nJdPPaplTMKkWnfmcdVQO4BkQn_arV9tAEbiX_43gR6dN3wDhujte-u-n8OE">
+                   poster="{{ asset('images/gallery-video-poster.png') }}">
                 <source src="{{ asset('videos/VID-20261001-WA0019.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung pemutaran video.
             </video>

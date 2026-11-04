@@ -30,9 +30,9 @@
             <div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 group flex flex-col">
                 <div class="relative w-full aspect-video bg-black overflow-hidden cursor-pointer" id="main-video-trigger">
                     <img id="main-video-poster"
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeI4Tee6dFPuK_LsZDM599a301XawBeC7-5L1qua5D9i5FRBAf8F5WGSeZ-66kcS_4EyFSzugvqxbJdeeNTbpctoDUeB1ZR6zC3cWwUeekxCAywaBQTetxKTXsq78xQmw-VKMjTxDG5biEYgtzT9LcztJSn9dMRHdM2kebVxzCJdn5nJdPPaplTMKkWnfmcdVQO4BkQn_arV9tAEbiX_43gR6dN3wDhujte-u-n8OE"
+                         src="{{ asset('images/gallery-video-poster.png') }}"
                          alt="Cinematic Video Preview"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                         class="w-full h-full object-contain opacity-90">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/30"></div>
 
                     <div class="absolute top-4 left-4 flex items-center gap-2">
