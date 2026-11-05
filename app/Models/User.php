@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $primaryKey = 'id_user';
+
     /**
      * Kolom yang dapat diisi secara massal (mass assignable).
      *
